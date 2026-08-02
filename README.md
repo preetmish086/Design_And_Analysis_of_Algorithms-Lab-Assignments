@@ -25,7 +25,7 @@ This repository contains the C programs developed as part of the **Design and An
 ```
 DAA-Lab
 │
-├── Code solutions
+├── Code Solutions
 │   ├── Q1_FunctionGraph.c
 │   ├── Q2_CoinSimulation.c
 │   ├── Q3_BubbleSort.c
@@ -63,8 +63,6 @@ DAA-Lab
 ---
 
 ## Question 1 — Ordering Functions by Growth Rate
-
-### Objective
 
 ### Objective
 
@@ -241,23 +239,12 @@ The generated CSV files can be imported into **Microsoft Excel** to create line/
 Compile using GCC.
 
 ```bash
-gcc "Code solutions/Q1_FunctionGraph.c" -o Q1 -lm
-gcc "Code solutions/Q2_CoinSimulation.c" -o Q2
-gcc "Code solutions/Q3_BubbleSort.c" -o Q3
-gcc "Code solutions/Q4_TOH.c" -o Q4
-gcc "Code solutions/Q5_PartitionPoint.c" -o Q5
-gcc "Code solutions/Q6_ElementUniqueness.c" -o Q6
-```
-
-Run
-
-```bash
-./Q1
-./Q2
-./Q3
-./Q4
-./Q5
-./Q6
+gcc "Code Solutions/Q1_FunctionGraph.c" -o Q1 -lm
+gcc "Code Solutions/Q2_CoinSimulation.c" -o Q2
+gcc "Code Solutions/Q3_BubbleSort.c" -o Q3
+gcc "Code Solutions/Q4_TOH.c" -o Q4
+gcc "Code Solutions/Q5_PartitionPoint.c" -o Q5
+gcc "Code Solutions/Q6_ElementUniqueness.c" -o Q6
 ```
 
 ---  
@@ -274,6 +261,7 @@ Execute the compiled programs as follows:
 ./Q5
 ./Q6
 ```
+---
 
 The graph generation programs produce CSV files that can be imported into Microsoft Excel for plotting.
 
