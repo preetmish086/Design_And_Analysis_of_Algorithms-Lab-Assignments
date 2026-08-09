@@ -256,7 +256,7 @@ The experiment records:
 The data is stored in:
 
 ```text
-Q2/mergesort_data.csv
+Q2/csv/mergesort_data.csv
 ```
 
 ### Graph
@@ -387,7 +387,7 @@ The experiment records:
 The data is stored in:
 
 ```text
-Q3/kway_data.csv
+Q3/csv/kway_data.csv
 ```
 
 ### Graph
@@ -432,7 +432,7 @@ The generated data can be imported into **Microsoft Excel** to create line or sc
 Separate CSV files are generated for each dictionary operation:
 
 ```text
-Q1/csv/
+Q1/graphs/csv/
 ├── q1_Search.csv
 ├── q1_Insert.csv
 ├── q1_Delete.csv
@@ -447,7 +447,7 @@ Q1/csv/
 The Merge Sort comparison data is stored in:
 
 ```text
-Q2/mergesort_data.dat
+Q2/csv/mergesort_data.csv
 ```
 
 ### Question 3
@@ -455,7 +455,7 @@ Q2/mergesort_data.dat
 The k-way merging comparison data is stored in:
 
 ```text
-Q3/kway_data.csv
+Q3/csv/kway_data.csv
 ```
 
 The data files can be opened or imported into **Microsoft Excel** and used to generate the corresponding graphs.
