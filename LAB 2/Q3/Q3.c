@@ -1,29 +1,3 @@
-/*
- * kway_merge_compare.c
- * ---------------------
- * We have k sorted arrays, each of size n, and want ONE sorted array
- * of size k*n. Two methods are compared:
- *
- * METHOD 1 (Sequential merging):
- *   Merge array 1 and array 2 -> result has 2n elements.
- *   Merge that result with array 3 -> result has 3n elements.
- *   ... keep merging in the next array one at a time.
- *   The i-th merge combines a run of size (i-1)*n with a new array of
- *   size n, costing O(i*n). Summing i = 2..k gives:
- *       T(n,k) = O(n) + O(2n) + O(3n) + ... + O(kn) = O(n*k^2)
- *
- * METHOD 2 (Pairwise / tournament merging):
- *   Pair up the k arrays and merge each pair -> k/2 arrays of size 2n.
- *   Pair those up and merge -> k/4 arrays of size 4n.
- *   Keep halving the number of arrays until only 1 remains.
- *   There are O(log k) "rounds", and each round merges a total of
- *   k*n elements (across all its pairs), costing O(k*n) per round:
- *       T(n,k) = O(k*n*log k)
- *
- * For large k, n*k*log(k) grows MUCH more slowly than n*k^2, so
- * Method 2 wins decisively as k grows -- exactly what the plot below
- * demonstrates.
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
