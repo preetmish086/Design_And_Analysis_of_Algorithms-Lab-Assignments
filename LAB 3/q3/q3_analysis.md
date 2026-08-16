@@ -4,17 +4,17 @@
 
 Using the divide-and-conquer approach, develop an algorithm to find the minimum and maximum elements in an array of `n` elements such that the number of comparisons is bounded by approximately:
 
-[
+\[
 \frac{3n}{2}
-]
+\]
 
 Implement the algorithm in C and validate the result by comparing the actual number of element comparisons with the theoretical bound.
 
 The required comparison bound is:
 
-[
+\[
 \boxed{\left\lceil\frac{3n}{2}\right\rceil - 2}
-]
+\]
 
 ---
 
@@ -22,13 +22,13 @@ The required comparison bound is:
 
 The objectives of this program are to:
 
-* Find the minimum element of an array.
-* Find the maximum element of an array.
-* Use a divide-and-conquer approach.
-* Reduce the number of comparisons compared with finding the minimum and maximum independently.
-* Count the number of element comparisons performed.
-* Validate the comparison count against the theoretical bound.
-* Analyze the time and auxiliary space complexity.
+- Find the minimum element of an array.
+- Find the maximum element of an array.
+- Use a divide-and-conquer approach.
+- Reduce the number of comparisons compared with finding the minimum and maximum independently.
+- Count the number of element comparisons performed.
+- Validate the comparison count against the theoretical bound.
+- Analyze the time and auxiliary space complexity.
 
 ---
 
@@ -40,9 +40,9 @@ A straightforward method is to find the minimum and maximum independently.
 
 Finding the minimum among `n` elements requires:
 
-[
+\[
 n-1
-]
+\]
 
 comparisons.
 
@@ -50,35 +50,35 @@ comparisons.
 
 Finding the maximum independently also requires:
 
-[
+\[
 n-1
-]
+\]
 
 comparisons.
 
 Therefore, the total number of comparisons is:
 
-[
+\[
 (n-1)+(n-1)
-]
+\]
 
-[
+\[
 =2n-2
-]
+\]
 
 Thus, the straightforward approach requires:
 
-[
+\[
 \boxed{2n-2}
-]
+\]
 
 comparisons.
 
 The divide-and-conquer approach reduces this to approximately:
 
-[
+\[
 \boxed{\frac{3n}{2}}
-]
+\]
 
 comparisons.
 
@@ -90,8 +90,8 @@ The array is recursively divided into two smaller halves.
 
 For each half, the algorithm finds:
 
-* Minimum element
-* Maximum element
+- Minimum element
+- Maximum element
 
 The results from the two halves are then combined.
 
@@ -101,9 +101,9 @@ The divide-and-conquer process consists of three stages.
 
 Divide the array into two halves using the midpoint:
 
-[
+\[
 mid = \left\lfloor\frac{low+high}{2}\right\rfloor
-]
+\]
 
 The two subarrays are:
 
@@ -141,9 +141,9 @@ Only two comparisons are required:
 
 Therefore, each combination step requires exactly:
 
-[
+\[
 \boxed{2\text{ comparisons}}
-]
+\]
 
 ---
 
@@ -163,9 +163,9 @@ then that element is both the minimum and maximum.
 
 Therefore:
 
-[
+\[
 T(1)=0
-]
+\]
 
 comparisons.
 
@@ -201,9 +201,9 @@ maximum = A[low]
 
 Therefore:
 
-[
+\[
 T(2)=1
-]
+\]
 
 comparison.
 
@@ -296,10 +296,10 @@ The array is divided recursively:
                     Divide
                    /      \
              [7 2 9 4]  [1 8 3 6]
-                |            |
-             Divide       Divide
-              /  \         /  \
-           [7 2][9 4]   [1 8][3 6]
+                 |            |
+              Divide       Divide
+               /  \          /  \
+            [7 2][9 4]    [1 8][3 6]
 ```
 
 ### First-level base cases
@@ -363,9 +363,9 @@ Maximum = 9
 
 Total comparisons:
 
-[
+\[
 4+4+2=10
-]
+\]
 
 ---
 
@@ -373,33 +373,33 @@ Total comparisons:
 
 The algorithm performs:
 
-* `0` comparisons for one element.
-* `1` comparison for two elements.
-* `2` additional comparisons whenever two solved subarrays are combined.
+- `0` comparisons for one element.
+- `1` comparison for two elements.
+- `2` additional comparisons whenever two solved subarrays are combined.
 
 The recurrence is:
 
-[
+\[
 T(n)=T(\lfloor n/2\rfloor)+T(\lceil n/2\rceil)+2
-]
+\]
 
 with:
 
-[
+\[
 T(1)=0
-]
+\]
 
 and:
 
-[
+\[
 T(2)=1
-]
+\]
 
 For the standard divide-and-conquer solution, the total number of comparisons is bounded by:
 
-[
+\[
 \boxed{T(n)\leq\left\lceil\frac{3n}{2}\right\rceil-2}
-]
+\]
 
 Thus, the required approximately `3n/2` comparison bound is satisfied.
 
@@ -409,29 +409,29 @@ Thus, the required approximately `3n/2` comparison bound is satisfied.
 
 For an even number of elements, the exact number of comparisons is:
 
-[
+\[
 T(n)=\frac{3n}{2}-2
-]
+\]
 
 For example, for:
 
-[
+\[
 n=8
-]
+\]
 
 the comparison count is:
 
-[
+\[
 T(8)=\frac{3(8)}{2}-2
-]
+\]
 
-[
+\[
 =12-2
-]
+\]
 
-[
+\[
 =10
-]
+\]
 
 The program therefore produces:
 
@@ -446,47 +446,47 @@ Theoretical upper bound : 10
 
 For an odd number of elements, the number of comparisons is:
 
-[
+\[
 T(n)=\frac{3(n-1)}{2}
-]
+\]
 
 This is equivalent to:
 
-[
+\[
 T(n)=\left\lceil\frac{3n}{2}\right\rceil-2
-]
+\]
 
 For example, for:
 
-[
+\[
 n=7
-]
+\]
 
-[
+\[
 T(7)=\frac{3(7-1)}{2}
-]
+\]
 
-[
+\[
 =\frac{18}{2}
-]
+\]
 
-[
+\[
 =9
-]
+\]
 
 The theoretical bound is:
 
-[
+\[
 \left\lceil\frac{21}{2}\right\rceil-2
-]
+\]
 
-[
+\[
 =11-2
-]
+\]
 
-[
+\[
 =9
-]
+\]
 
 Therefore, the bound is satisfied exactly.
 
@@ -546,21 +546,21 @@ Every element participates in the recursive process, and each combination requir
 
 The recurrence is:
 
-[
+\[
 T(n)=2T(n/2)+O(1)
-]
+\]
 
 Using the Master Theorem:
 
-[
+\[
 T(n)=O(n)
-]
+\]
 
 Therefore:
 
-[
+\[
 \boxed{\text{Time Complexity} = O(n)}
-]
+\]
 
 In fact, the algorithm performs a linear number of element comparisons.
 
@@ -572,15 +572,15 @@ At most `O(log n)` recursive calls exist on the recursion stack at a time.
 
 Therefore:
 
-[
+\[
 \boxed{\text{Auxiliary Space Complexity} = O(\log n)}
-]
+\]
 
 The input array itself requires:
 
-[
+\[
 O(n)
-]
+\]
 
 memory, but this is not counted as auxiliary space.
 
@@ -588,18 +588,18 @@ memory, but this is not counted as auxiliary space.
 
 ## 14. Comparison with the Straightforward Method
 
-| Method                      | Number of Comparisons | Time Complexity |
-| --------------------------- | --------------------: | --------------: |
-| Find Min and Max Separately |              `2n - 2` |          `O(n)` |
-| Divide and Conquer          |      `ceil(3n/2) - 2` |          `O(n)` |
+| Method | Number of Comparisons | Time Complexity |
+| --- | ---: | ---: |
+| Find Min and Max Separately | `2n - 2` | `O(n)` |
+| Divide and Conquer | `ceil(3n/2) - 2` | `O(n)` |
 
 For large `n`:
 
-[
+\[
 \left\lceil\frac{3n}{2}\right\rceil-2
 <
 2n-2
-]
+\]
 
 Therefore, the divide-and-conquer approach performs fewer element comparisons while retaining linear time complexity.
 
@@ -609,19 +609,19 @@ Therefore, the divide-and-conquer approach performs fewer element comparisons wh
 
 The C program accepts an array from the user and displays:
 
-* Minimum element
-* Maximum element
-* Actual number of comparisons
-* Theoretical comparison bound
-* Validation result
-* Time complexity
-* Auxiliary space complexity
+- Minimum element
+- Maximum element
+- Actual number of comparisons
+- Theoretical comparison bound
+- Validation result
+- Time complexity
+- Auxiliary space complexity
 
 The actual comparison count is checked against:
 
-[
+\[
 \boxed{\left\lceil\frac{3n}{2}\right\rceil-2}
-]
+\]
 
 If:
 
@@ -651,7 +651,7 @@ Enter 8 elements:
 
 ```text
 ============================================
-                  RESULT
+                 RESULT
 ============================================
 
 Minimum = 1
@@ -682,37 +682,37 @@ Auxiliary Space       : O(log n)
 
 The divide-and-conquer algorithm successfully finds both the minimum and maximum elements of an array while keeping the number of element comparisons within the required bound:
 
-[
+\[
 \boxed{\left\lceil\frac{3n}{2}\right\rceil-2}
-]
+\]
 
 The algorithm recursively divides the array into smaller subarrays, solves each subproblem independently, and combines their results using only two comparisons.
 
 Compared with the straightforward approach requiring:
 
-[
+\[
 2n-2
-]
+\]
 
 comparisons, the divide-and-conquer approach requires approximately:
 
-[
+\[
 \frac{3n}{2}
-]
+\]
 
 comparisons.
 
 The algorithm has:
 
-[
+\[
 \boxed{O(n)}
-]
+\]
 
 time complexity and:
 
-[
+\[
 \boxed{O(\log n)}
-]
+\]
 
 auxiliary space complexity due to recursion.
 

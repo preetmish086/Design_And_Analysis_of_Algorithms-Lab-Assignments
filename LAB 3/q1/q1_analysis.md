@@ -2,7 +2,7 @@
 
 ## Objective
 
-Search for an element `x` in a sorted list using both binary search and ternary search, and validate the claim that binary search is better. The lab question asks for an implementation and validation rather than a graph. 
+Search for an element `x` in a sorted list using both binary search and ternary search, and validate the claim that binary search is better. The lab question asks for an implementation and validation rather than a graph.
 
 ## Algorithm
 
@@ -66,7 +66,9 @@ Although `log3(n)` has a smaller mathematical value than `log2(n)`, each ternary
 
 ## Validation
 
-Input 1-
+### Input 1
+
+```text
 ============================================
        INDIVIDUAL SEARCH COMPARISON
 ============================================
@@ -90,15 +92,16 @@ Total basic timesteps: 18
 --------------------------------------------
 Comparison for this input
 --------------------------------------------
-Binary Search is better for this input.  
+Binary Search is better for this input.
+```
 
--------------------------------------------  
+### Input 2
 
-Input-2  
+```text
 ============================================
        INDIVIDUAL SEARCH COMPARISON
 ============================================
-Enter n (n <= 1000): 5    
+Enter n (n <= 1000): 5
 Enter 5 sorted elements:
 10 20 30 40 50
 Enter the element to be searched: 10
@@ -118,11 +121,12 @@ Total basic timesteps: 15
 --------------------------------------------
 Comparison for this input
 --------------------------------------------
-Binary Search is better for this input.  
+Binary Search is better for this input.
+```
 
---------------------------------------------  
+### Input 3
 
-Input-3  
+```text
 ============================================
        INDIVIDUAL SEARCH COMPARISON
 ============================================
@@ -147,3 +151,4 @@ Total basic timesteps: 23
 Comparison for this input
 --------------------------------------------
 Binary Search is better for this input.
+```

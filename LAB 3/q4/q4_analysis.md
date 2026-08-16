@@ -8,15 +8,15 @@ Unlike conventional matrix multiplication, which requires eight recursive matrix
 
 This reduces the asymptotic time complexity from:
 
-[
+\[
 \Theta(n^3)
-]
+\]
 
 to:
 
-[
+\[
 \Theta(n^{\log_2 7}) \approx \Theta(n^{2.807})
-]
+\]
 
 ---
 
@@ -24,23 +24,23 @@ to:
 
 Given two matrices:
 
-[
+\[
 A=
 \begin{bmatrix}
-A_{11} & A_{12}\
+A_{11} & A_{12}\\
 A_{21} & A_{22}
 \end{bmatrix}
-]
+\]
 
 and
 
-[
+\[
 B=
 \begin{bmatrix}
-B_{11} & B_{12}\
+B_{11} & B_{12}\\
 B_{21} & B_{22}
 \end{bmatrix}
-]
+\]
 
 each matrix is divided into four equal-sized submatrices.
 
@@ -52,33 +52,33 @@ Instead of performing the eight recursive multiplications required by ordinary b
 
 The seven products are:
 
-[
+\[
 M_1=(A_{11}+A_{22})(B_{11}+B_{22})
-]
+\]
 
-[
+\[
 M_2=(A_{21}+A_{22})B_{11}
-]
+\]
 
-[
+\[
 M_3=A_{11}(B_{12}-B_{22})
-]
+\]
 
-[
+\[
 M_4=A_{22}(B_{21}-B_{11})
-]
+\]
 
-[
+\[
 M_5=(A_{11}+A_{12})B_{22}
-]
+\]
 
-[
+\[
 M_6=(A_{21}-A_{11})(B_{11}+B_{12})
-]
+\]
 
-[
+\[
 M_7=(A_{12}-A_{22})(B_{21}+B_{22})
-]
+\]
 
 Each multiplication above is performed recursively using Strassen's method.
 
@@ -88,37 +88,37 @@ Each multiplication above is performed recursively using Strassen's method.
 
 After calculating the seven products, the four blocks of the resulting matrix:
 
-[
+\[
 C=AB
-]
+\]
 
 are obtained as follows:
 
-[
+\[
 C_{11}=M_1+M_4-M_5+M_7
-]
+\]
 
-[
+\[
 C_{12}=M_3+M_5
-]
+\]
 
-[
+\[
 C_{21}=M_2+M_4
-]
+\]
 
-[
+\[
 C_{22}=M_1-M_2+M_3+M_6
-]
+\]
 
 The four blocks are then combined to form the final matrix:
 
-[
+\[
 C=
 \begin{bmatrix}
-C_{11} & C_{12}\
+C_{11} & C_{12}\\
 C_{21} & C_{22}
 \end{bmatrix}
-]
+\]
 
 ---
 
@@ -128,9 +128,9 @@ The recursion terminates when the matrix size becomes `1 × 1`.
 
 For two single elements:
 
-[
+\[
 C_{11}=A_{11}B_{11}
-]
+\]
 
 Therefore, the base case is:
 
@@ -161,15 +161,15 @@ If `n` is not a power of two, the program pads the matrices with zeros to the ne
 
 For example:
 
-[
+\[
 3\times3 \rightarrow 4\times4
-]
+\]
 
 and:
 
-[
+\[
 5\times5 \rightarrow 8\times8
-]
+\]
 
 Since the added elements are zero, padding does not affect the required portion of the final product.
 
@@ -230,49 +230,49 @@ STRASSEN(A, B, C, n)
 
 In conventional divide-and-conquer matrix multiplication, each recursive step requires:
 
-[
+\[
 8
-]
+\]
 
 matrix multiplications of size `n/2 × n/2`.
 
 Therefore:
 
-[
+\[
 T(n)=8T(n/2)+\Theta(n^2)
-]
+\]
 
 which gives:
 
-[
+\[
 T(n)=\Theta(n^3)
-]
+\]
 
 Strassen's algorithm reduces the number of recursive multiplications from `8` to `7`.
 
 Therefore:
 
-[
+\[
 T(n)=7T(n/2)+\Theta(n^2)
-]
+\]
 
 By the Master Theorem:
 
-[
+\[
 T(n)=\Theta(n^{\log_2 7})
-]
+\]
 
 Since:
 
-[
+\[
 \log_2 7 \approx 2.807
-]
+\]
 
 the complexity is:
 
-[
+\[
 \boxed{\Theta(n^{2.807})}
-]
+\]
 
 Thus, Strassen's method has a better asymptotic time complexity than conventional matrix multiplication.
 
@@ -284,15 +284,15 @@ The implementation dynamically creates submatrices and temporary matrices during
 
 The space required for storing matrices and temporary matrices is:
 
-[
+\[
 \boxed{O(n^2)}
-]
+\]
 
 The recursive call stack has depth:
 
-[
+\[
 O(\log n)
-]
+\]
 
 but the dominant auxiliary matrix storage is quadratic.
 
@@ -302,35 +302,35 @@ but the dominant auxiliary matrix storage is quadratic.
 
 For two `2 × 2` matrices:
 
-[
+\[
 A=
 \begin{bmatrix}
-1 & 2\
+1 & 2\\
 3 & 4
 \end{bmatrix}
-]
+\]
 
-[
+\[
 B=
 \begin{bmatrix}
-5 & 6\
+5 & 6\\
 7 & 8
 \end{bmatrix}
-]
+\]
 
 the resulting product is:
 
-[
+\[
 C=AB
-]
+\]
 
-[
+\[
 C=
 \begin{bmatrix}
-19 & 22\
+19 & 22\\
 43 & 50
 \end{bmatrix}
-]
+\]
 
 The program produces the same result using Strassen's seven recursive products.
 
@@ -340,25 +340,25 @@ The program produces the same result using Strassen's seven recursive products.
 
 The implementation validates the algorithm by:
 
-* Accepting two square matrices as input.
-* Performing multiplication using Strassen's divide-and-conquer method.
-* Displaying the resulting matrix.
-* Supporting non-power-of-two input sizes through zero padding.
-* Printing the theoretical recurrence and time complexity.
-* Properly deallocating all dynamically allocated memory.
+- Accepting two square matrices as input.
+- Performing multiplication using Strassen's divide-and-conquer method.
+- Displaying the resulting matrix.
+- Supporting non-power-of-two input sizes through zero padding.
+- Printing the theoretical recurrence and time complexity.
+- Properly deallocating all dynamically allocated memory.
 
 ---
 
 ## 13. Complexity Summary
 
-| Operation                          |   Complexity |
-| ---------------------------------- | -----------: |
-| Matrix addition/subtraction        |      `Θ(n²)` |
-| Conventional matrix multiplication |      `Θ(n³)` |
-| Strassen matrix multiplication     | `Θ(n^log₂7)` |
-| Strassen approximate complexity    |  `Θ(n²·⁸⁰⁷)` |
-| Auxiliary matrix storage           |      `O(n²)` |
-| Recursion depth                    |   `O(log n)` |
+| Operation | Complexity |
+| --- | ---: |
+| Matrix addition/subtraction | `Θ(n²)` |
+| Conventional matrix multiplication | `Θ(n³)` |
+| Strassen matrix multiplication | `Θ(n^log₂7)` |
+| Strassen approximate complexity | `Θ(n²·⁸⁰⁷)` |
+| Auxiliary matrix storage | `O(n²)` |
+| Recursion depth | `O(log n)` |
 
 ---
 
@@ -370,14 +370,14 @@ Its main improvement is reducing the number of recursive matrix multiplications 
 
 The resulting recurrence is:
 
-[
+\[
 T(n)=7T(n/2)+\Theta(n^2)
-]
+\]
 
 which gives:
 
-[
+\[
 \boxed{T(n)=\Theta(n^{\log_2 7})\approx\Theta(n^{2.807})}
-]
+\]
 
 Therefore, Strassen's algorithm has a better asymptotic time complexity than conventional `Θ(n³)` matrix multiplication.
