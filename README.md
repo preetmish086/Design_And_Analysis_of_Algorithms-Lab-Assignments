@@ -52,14 +52,25 @@ DAA-Lab
 │   │
 │   └── README.md
 │
-├── Lab 3
-│   ├── Q1
-│   ├── Q2
-│   ├── Q3
-│   ├── Q4
-│   ├── Q5
-│   ├── Q6
-│   └── README.md
+├LAB 3/
+├── q1/
+│   ├── q1.c
+│   └── q1_analysis.md
+├── q2/
+│   ├── q2.c
+│   └── q2_analysis.md
+├── q3/
+│   ├── q3.c
+│   └── q3_analysis.md
+├── q4/
+│   ├── q4.c
+│   └── q4_analysis.md
+├── q5/
+│   ├── q5.c
+│   └── q5_analysis.md
+└── q6/
+    ├── q6.c
+    └── q6_analysis.md
 │
 ├── README.md
 └── .gitignore
