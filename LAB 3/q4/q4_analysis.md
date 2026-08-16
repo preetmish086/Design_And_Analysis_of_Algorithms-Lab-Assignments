@@ -1,8 +1,8 @@
-# Q4 — Matrix Multiplication Using Strassen's Method
+# Q4 - Matrix Multiplication Using Strassen's Method
 
 ## 1. Objective
 
-Multiply two square matrices of size `n × n` using **Strassen's divide-and-conquer matrix multiplication algorithm**.
+Multiply two square matrices of size $n \times n$ using **Strassen's divide-and-conquer matrix multiplication algorithm**.
 
 Unlike conventional matrix multiplication, which requires eight recursive matrix multiplications at each divide-and-conquer step, Strassen's method reduces this to **seven recursive multiplications**.
 
@@ -124,7 +124,7 @@ C_{21} & C_{22}
 
 ## 5. Base Case
 
-The recursion terminates when the matrix size becomes `1 × 1`.
+The recursion terminates when the matrix size becomes $1 \times 1$.
 
 For two single elements:
 
@@ -136,7 +136,7 @@ Therefore, the base case is:
 
 ```text
 if n = 1
-    C[0][0] = A[0][0] × B[0][0]
+    C[0][0] = A[0][0] * B[0][0]
 ```
 
 ---
@@ -147,13 +147,25 @@ The basic recursive formulation of Strassen's algorithm works conveniently when 
 
 For example:
 
-```text
-2 × 2
-4 × 4
-8 × 8
-16 × 16
-...
-```
+\[
+2 \times 2
+\]
+
+\[
+4 \times 4
+\]
+
+\[
+8 \times 8
+\]
+
+\[
+16 \times 16
+\]
+
+\[
+\cdots
+\]
 
 The implementation also supports arbitrary positive values of `n`.
 
@@ -173,7 +185,7 @@ and:
 
 Since the added elements are zero, padding does not affect the required portion of the final product.
 
-After multiplication, only the original `n × n` portion of the result is displayed.
+After multiplication, only the original $n \times n$ portion of the result is displayed.
 
 ---
 
@@ -183,13 +195,13 @@ After multiplication, only the original `n × n` portion of the result is displa
 2. Determine the next power of two greater than or equal to `n`.
 3. Dynamically allocate the matrices using the padded size.
 4. Read the two input matrices.
-5. Store the input values in the upper-left `n × n` portion of the padded matrices.
+5. Store the input values in the upper-left $n \times n$ portion of the padded matrices.
 6. Recursively divide each matrix into four equal-sized blocks.
 7. Compute the seven Strassen products `M1` through `M7`.
 8. Recursively repeat the process for each required multiplication.
 9. Combine the seven products to obtain `C11`, `C12`, `C21`, and `C22`.
 10. Combine the four blocks into the final product matrix.
-11. Display only the original `n × n` portion.
+11. Display only the original $n \times n$ portion.
 12. Free all dynamically allocated memory.
 
 ---
@@ -200,24 +212,24 @@ After multiplication, only the original `n × n` portion of the result is displa
 STRASSEN(A, B, C, n)
 
     if n = 1
-        C[0][0] ← A[0][0] × B[0][0]
+        C[0][0] <- A[0][0] * B[0][0]
         return
 
     Divide A into A11, A12, A21, A22
     Divide B into B11, B12, B21, B22
 
-    M1 ← STRASSEN(A11 + A22, B11 + B22)
-    M2 ← STRASSEN(A21 + A22, B11)
-    M3 ← STRASSEN(A11, B12 - B22)
-    M4 ← STRASSEN(A22, B21 - B11)
-    M5 ← STRASSEN(A11 + A12, B22)
-    M6 ← STRASSEN(A21 - A11, B11 + B12)
-    M7 ← STRASSEN(A12 - A22, B21 + B22)
+    M1 <- STRASSEN(A11 + A22, B11 + B22)
+    M2 <- STRASSEN(A21 + A22, B11)
+    M3 <- STRASSEN(A11, B12 - B22)
+    M4 <- STRASSEN(A22, B21 - B11)
+    M5 <- STRASSEN(A11 + A12, B22)
+    M6 <- STRASSEN(A21 - A11, B11 + B12)
+    M7 <- STRASSEN(A12 - A22, B21 + B22)
 
-    C11 ← M1 + M4 - M5 + M7
-    C12 ← M3 + M5
-    C21 ← M2 + M4
-    C22 ← M1 - M2 + M3 + M6
+    C11 <- M1 + M4 - M5 + M7
+    C12 <- M3 + M5
+    C21 <- M2 + M4
+    C22 <- M1 - M2 + M3 + M6
 
     Combine C11, C12, C21, C22
 
@@ -234,7 +246,7 @@ In conventional divide-and-conquer matrix multiplication, each recursive step re
 8
 \]
 
-matrix multiplications of size `n/2 × n/2`.
+matrix multiplications of size $n/2 \times n/2$.
 
 Therefore:
 
@@ -300,7 +312,7 @@ but the dominant auxiliary matrix storage is quadratic.
 
 ## 11. Example
 
-For two `2 × 2` matrices:
+For two $2 \times 2$ matrices:
 
 \[
 A=
@@ -353,11 +365,11 @@ The implementation validates the algorithm by:
 
 | Operation | Complexity |
 | --- | ---: |
-| Matrix addition/subtraction | `Θ(n²)` |
-| Conventional matrix multiplication | `Θ(n³)` |
-| Strassen matrix multiplication | `Θ(n^log₂7)` |
-| Strassen approximate complexity | `Θ(n²·⁸⁰⁷)` |
-| Auxiliary matrix storage | `O(n²)` |
+| Matrix addition/subtraction | $\Theta(n^2)$ |
+| Conventional matrix multiplication | $\Theta(n^3)$ |
+| Strassen matrix multiplication | $\Theta(n^{\log_2 7})$ |
+| Strassen approximate complexity | $\Theta(n^{2.807})$ |
+| Auxiliary matrix storage | $O(n^2)$ |
 | Recursion depth | `O(log n)` |
 
 ---
@@ -366,7 +378,7 @@ The implementation validates the algorithm by:
 
 Strassen's algorithm is a divide-and-conquer technique for multiplying square matrices.
 
-Its main improvement is reducing the number of recursive matrix multiplications from eight to seven. Although this introduces additional matrix additions and subtractions, those operations require only `Θ(n²)` time.
+Its main improvement is reducing the number of recursive matrix multiplications from eight to seven. Although this introduces additional matrix additions and subtractions, those operations require only $\Theta(n^2)$ time.
 
 The resulting recurrence is:
 
@@ -380,4 +392,4 @@ which gives:
 \boxed{T(n)=\Theta(n^{\log_2 7})\approx\Theta(n^{2.807})}
 \]
 
-Therefore, Strassen's algorithm has a better asymptotic time complexity than conventional `Θ(n³)` matrix multiplication.
+Therefore, Strassen's algorithm has a better asymptotic time complexity than conventional $\Theta(n^3)$ matrix multiplication.

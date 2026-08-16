@@ -1,4 +1,4 @@
-# Q3 — Find Minimum and Maximum Using Divide and Conquer
+# Q3 - Find Minimum and Maximum Using Divide and Conquer
 
 ## 1. Problem Statement
 
@@ -151,7 +151,7 @@ Therefore, each combination step requires exactly:
 
 Two base cases are used.
 
-### Case 1 — One Element
+### Case 1 - One Element
 
 If the subarray contains one element:
 
@@ -169,7 +169,7 @@ T(1)=0
 
 comparisons.
 
-### Case 2 — Two Elements
+### Case 2 - Two Elements
 
 If the subarray contains two elements:
 
@@ -230,47 +230,47 @@ The recursive algorithm can be summarized as follows:
 FIND-MIN-MAX(A, low, high)
 
     if low = high
-        min ← A[low]
-        max ← A[low]
-        comparisons ← 0
+        min <- A[low]
+        max <- A[low]
+        comparisons <- 0
         return min, max, comparisons
 
     if high = low + 1
         compare A[low] and A[high]
 
         if A[low] < A[high]
-            min ← A[low]
-            max ← A[high]
+            min <- A[low]
+            max <- A[high]
         else
-            min ← A[high]
-            max ← A[low]
+            min <- A[high]
+            max <- A[low]
 
-        comparisons ← 1
+        comparisons <- 1
         return min, max, comparisons
 
-    mid ← floor((low + high) / 2)
+    mid <- floor((low + high) / 2)
 
     left_min, left_max, left_comparisons
-        ← FIND-MIN-MAX(A, low, mid)
+        <- FIND-MIN-MAX(A, low, mid)
 
     right_min, right_max, right_comparisons
-        ← FIND-MIN-MAX(A, mid + 1, high)
+        <- FIND-MIN-MAX(A, mid + 1, high)
 
     compare left_min and right_min
 
     if left_min < right_min
-        min ← left_min
+        min <- left_min
     else
-        min ← right_min
+        min <- right_min
 
     compare left_max and right_max
 
     if left_max > right_max
-        max ← left_max
+        max <- left_max
     else
-        max ← right_max
+        max <- right_max
 
-    comparisons ←
+    comparisons <-
         left_comparisons
         + right_comparisons
         + 2
@@ -327,8 +327,8 @@ Comparisons = 1
 Combining these two results:
 
 ```text
-Compare minimums: 2 vs 4  → 1 comparison
-Compare maximums: 7 vs 9  → 1 comparison
+Compare minimums: 2 vs 4  -> 1 comparison
+Compare maximums: 7 vs 9  -> 1 comparison
 ```
 
 Therefore:
@@ -350,8 +350,8 @@ Comparisons = 4
 Finally, combine the two halves:
 
 ```text
-Compare minimums: 2 vs 1  → 1 comparison
-Compare maximums: 9 vs 8  → 1 comparison
+Compare minimums: 2 vs 1  -> 1 comparison
+Compare maximums: 9 vs 8  -> 1 comparison
 ```
 
 Final result:

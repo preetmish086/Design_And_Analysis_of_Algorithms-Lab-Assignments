@@ -1,4 +1,4 @@
-# Q6 — Selection Sort Using Loop Invariants
+# Q6 - Selection Sort Using Loop Invariants
 
 ## 1. Problem Statement
 
@@ -64,15 +64,15 @@ After iteration 4:
 ```text
 SELECTION-SORT(A, n)
 
-    for i ← 1 to n - 1
+    for i <- 1 to n - 1
 
-        min_index ← i
+        min_index <- i
 
-        for j ← i + 1 to n
+        for j <- i + 1 to n
 
             if A[j] < A[min_index]
 
-                min_index ← j
+                min_index <- j
 
         exchange A[i] with A[min_index]
 
@@ -114,7 +114,7 @@ Assume the loop invariant is true at the beginning of iteration `i`.
 Therefore:
 
 ```text
-A[0...i−1]
+A[0...i-1]
 ```
 
 already contains the `i` smallest elements in sorted order.
@@ -122,7 +122,7 @@ already contains the `i` smallest elements in sorted order.
 The algorithm searches:
 
 ```text
-A[i...n−1]
+A[i...n-1]
 ```
 
 and finds the smallest element in this remaining portion.
@@ -148,7 +148,7 @@ The outer loop terminates after processing position `n-2`.
 At this point:
 
 ```text
-A[0...n−2]
+A[0...n-2]
 ```
 
 contains the first `n-1` smallest elements in sorted order.
@@ -257,10 +257,10 @@ However, this does not change the asymptotic running time because the minimum-se
 
 | Case | Time Complexity |
 | --- | ---: |
-| Best Case | `Θ(n²)` |
-| Average Case | `Θ(n²)` |
-| Worst Case | `Θ(n²)` |
-| Auxiliary Space | `Θ(1)` |
+| Best Case | $\Theta(n^2)$ |
+| Average Case | $\Theta(n^2)$ |
+| Worst Case | $\Theta(n^2)$ |
+| Auxiliary Space | $\Theta(1)$ |
 
 The algorithm sorts the array in-place and requires only a constant amount of additional memory.
 

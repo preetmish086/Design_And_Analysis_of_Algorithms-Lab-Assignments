@@ -1,4 +1,4 @@
-# Q2 — Search the Defective Coin
+# Q2 - Search the Defective Coin
 
 ## Problem Statement
 
@@ -8,7 +8,7 @@ coin exists, it is lighter than the normal coins.
 The objective is to find the defective coin, if present, using a balance scale
 and a divide-and-conquer approach.
 
-The required complexity is logarithmic, i.e. O(log₂ n) balance-scale operations.  
+The required complexity is logarithmic, i.e. $O(\log_2 n)$ balance-scale operations.  
 
 ---
 
@@ -35,11 +35,13 @@ The algorithm does not access the absolute weight of any individual coin.
 
 ## 2. Divide-and-Conquer Strategy
 
-Let the current candidate interval contain n coins.
+Let the current candidate interval contain $n$ coins.
 
 Set:
 
-half = floor(n / 2)
+\[
+half = \left\lfloor\frac{n}{2}\right\rfloor
+\]
 
 Divide the candidates into:
 
@@ -50,7 +52,7 @@ Remainder   = one coin if n is odd
 Perform one weighing:
 
 Left group vs Right group
-Case 1 — Left group is lighter
+Case 1 - Left group is lighter
 
 The defective coin must be in the left group.
 
@@ -59,7 +61,7 @@ be used as a known-good reference for later comparisons.
 
 Recursively search the left group.
 
-Case 2 — Right group is lighter
+Case 2 - Right group is lighter
 
 The defective coin must be in the right group.
 
@@ -68,7 +70,7 @@ be used as a known-good reference.
 
 Recursively search the right group.
 
-Case 3 — Both groups are equal
+Case 3 - Both groups are equal
 
 Since there is at most one defective coin, all coins in both weighed groups
 must be normal.
@@ -88,8 +90,8 @@ is the only possible defective coin.
 
 Compare the remainder with a known-good coin from either balanced group.
 
-Remainder lighter → defective coin found.
-Remainder equal → no defective coin exists.  
+Remainder lighter -> defective coin found.
+Remainder equal -> no defective coin exists.  
 
 ## 3. Small-Case Validation
 n = 2
@@ -97,9 +99,9 @@ A | B
 
 Compare A and B.
 
-A < B → A is defective.
-B < A → B is defective.
-A = B → no defective coin.
+A < B -> A is defective.
+B < A -> B is defective.
+A = B -> no defective coin.
 
 Maximum: 1 weighing.
 
@@ -143,7 +145,7 @@ One weighing identifies the candidate group if a defect exists.
 
 The remaining four candidates are then divided again.
 
-8 → 4 → 2
+8 -> 4 -> 2
 
 Therefore the number of weighings is logarithmic.  
 
@@ -151,7 +153,7 @@ Therefore the number of weighings is logarithmic.
 DEFECTIVE-COIN(C, left, right, reference)
 
 
-    n ← right - left
+    n <- right - left
 
 
     if n = 2
@@ -180,18 +182,18 @@ DEFECTIVE-COIN(C, left, right, reference)
         return NONE
 
 
-    half ← floor(n / 2)
+    half <- floor(n / 2)
 
 
-    left group  ← C[left ... left + half - 1]
-    right group ← C[left + half ... left + 2*half - 1]
+    left group  <- C[left ... left + half - 1]
+    right group <- C[left + half ... left + 2*half - 1]
 
 
-    result ← WEIGH(left group, right group)
+    result <- WEIGH(left group, right group)
 
 
     if result = LEFT_LIGHTER
-        reference ← any coin from right group
+        reference <- any coin from right group
         return DEFECTIVE-COIN(
             C,
             left,
@@ -201,7 +203,7 @@ DEFECTIVE-COIN(C, left, right, reference)
 
 
     if result = RIGHT_LIGHTER
-        reference ← any coin from left group
+        reference <- any coin from left group
         return DEFECTIVE-COIN(
             C,
             left + half,
@@ -217,7 +219,7 @@ DEFECTIVE-COIN(C, left, right, reference)
             return NONE
 
 
-        remainder ← C[left + 2*half]
+        remainder <- C[left + 2*half]
 
 
         weigh remainder against a known-good coin
@@ -267,28 +269,29 @@ Thus the invariant is preserved in every case.
 
 ## 6. Complexity Analysis
 
-At each main recursive step, the candidate set is reduced from n coins to
-approximately n/2 coins.
+At each main recursive step, the candidate set is reduced from $n$ coins to
+approximately $n/2$ coins.
 
 The recurrence is therefore:
 
-T(n) = T(floor(n/2)) + O(1)
+\[
+T(n)=T\left(\left\lfloor\frac{n}{2}\right\rfloor\right)+O(1)
+\]
 
-For odd n, an additional constant number of balance operations may be needed
+For odd $n$, an additional constant number of balance operations may be needed
 to compare the remainder with a known-good coin.
 
 Thus:
 
-T(n) = O(log2 n)
+\[
+T(n)=O(\log_2 n)
+\]
 
 The number of candidate coins decreases approximately as:
 
-n
-n/2
-n/4
-n/8
-...
-1
+\[
+n,\frac{n}{2},\frac{n}{4},\frac{n}{8},\ldots,1
+\]
 
 Therefore the depth of the recursion is logarithmic.
 
@@ -358,13 +361,13 @@ n >= 2
 The program reports:
 
 Balance weighings used: k
-Theoretical complexity: O(log2 n)
+Theoretical complexity: $O(\log_2 n)$
 
 For increasing values of n, the number of balance operations should grow approximately logarithmically rather than linearly. The experimentally observed number of weighings can vary slightly because odd-sized candidate sets may require an additional remainder comparison.  
 
 For example, the candidate set follows the approximate sequence:
 
-1024 → 512 → 256 → 128 → 64 → 32 → 16 → 8 → 4 → 2
+1024 -> 512 -> 256 -> 128 -> 64 -> 32 -> 16 -> 8 -> 4 -> 2
 
 which requires only a small number of divide-and-conquer levels.
 
@@ -380,7 +383,9 @@ remainder to be checked against a known-good coin.
 The candidate set is reduced approximately by half at each recursive level,
 giving:
 
-T(n) = O(log2 n)
+\[
+T(n)=O(\log_2 n)
+\]
 
 balance-scale operations.
 

@@ -1,4 +1,4 @@
-# Q1 — Binary Search vs Ternary Search
+# Q1 - Binary Search vs Ternary Search
 
 ## Objective
 
@@ -62,7 +62,7 @@ Therefore:
 T_t(n)=O(\log_3 n)
 \]
 
-Although `log3(n)` has a smaller mathematical value than `log2(n)`, each ternary-search iteration performs more work: two middle positions and up to two key comparisons, i.e, c' is larger thsan c because a ternary iteration requires more comparisons than a binary iteration. The timestep experiment validates that constant-factor difference under the particular RAM counting convention.
+Although $\log_3(n)$ has a smaller mathematical value than $\log_2(n)$, each ternary-search iteration performs more work: two middle positions and up to two key comparisons, i.e, $c'$ is larger thsan $c$ because a ternary iteration requires more comparisons than a binary iteration. The timestep experiment validates that constant-factor difference under the particular RAM counting convention.
 
 ## Validation
 

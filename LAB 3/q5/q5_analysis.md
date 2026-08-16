@@ -1,8 +1,8 @@
-# Q5 — Special-Pattern Matrix Multiplication Using Divide and Conquer
+# Q5 - Special-Pattern Matrix Multiplication Using Divide and Conquer
 
 ## 1. Problem Statement
 
-Two square matrices of size `n × n` are given, where:
+Two square matrices of size $n \times n$ are given, where:
 
 \[
 n = 2^k
@@ -25,7 +25,7 @@ That is:
 - The two diagonal blocks are identical.
 - The two off-diagonal blocks are identical.
 - Each block itself has the same recursive structure.
-- The recursion continues until `1 × 1` matrices are reached.
+- The recursion continues until $1 \times 1$ matrices are reached.
 
 The objective is to design a **divide-and-conquer algorithm** to multiply two such matrices in:
 
@@ -48,10 +48,10 @@ The program should:
 n = 2^k
 \]
 
-- Accept two `n × n` matrices having the required special structure.
+- Accept two $n \times n$ matrices having the required special structure.
 - Multiply them using a divide-and-conquer approach.
 - Exploit the repeated diagonal and off-diagonal blocks.
-- Achieve `O(n²)` time complexity.
+- Achieve $O(n^2)$ time complexity.
 - Display the resulting matrix.
 
 ---
@@ -86,7 +86,7 @@ where each block has size:
 
 The important observation is that only **two distinct blocks** exist in each matrix.
 
-For example, the lower-left block of `A` is the same as `A₂`, and the lower-right block is the same as `A₁`.
+For example, the lower-left block of `A` is the same as $A_2$, and the lower-right block is the same as $A_1$.
 
 The same property holds for `B`.
 
@@ -196,7 +196,7 @@ Thus, instead of four recursive matrix multiplications, only two are required.
 
 ## 6. Resulting Matrix
 
-After calculating `C₁` and `C₂`, the result is:
+After calculating $C_1$ and $C_2$, the result is:
 
 \[
 C =
@@ -240,7 +240,7 @@ perform the following:
 
 1. If `n = 1`, multiply the two elements directly.
 2. Divide `A` and `B` into four equal-sized blocks.
-3. Extract the two unique blocks `A₁`, `A₂`, `B₁`, and `B₂`.
+3. Extract the two unique blocks $A_1$, $A_2$, $B_1$, and $B_2$.
 4. Calculate:
 
 \[
@@ -286,21 +286,21 @@ C_2&C_1
 SPECIAL-MULTIPLY(A, B, n)
 
     if n = 1
-        C[1][1] ← A[1][1] × B[1][1]
+        C[1][1] <- A[1][1] * B[1][1]
         return C
 
     Divide A into A1, A2, A2, A1
     Divide B into B1, B2, B2, B1
 
-    P ← SPECIAL-MULTIPLY(A1 + A2, B1 + B2, n/2)
+    P <- SPECIAL-MULTIPLY(A1 + A2, B1 + B2, n/2)
 
-    Q ← SPECIAL-MULTIPLY(A1 - A2, B1 - B2, n/2)
+    Q <- SPECIAL-MULTIPLY(A1 - A2, B1 - B2, n/2)
 
-    C1 ← (P + Q) / 2
+    C1 <- (P + Q) / 2
 
-    C2 ← (P - Q) / 2
+    C2 <- (P - Q) / 2
 
-    C ← | C1  C2 |
+    C <- | C1  C2 |
          | C2  C1 |
 
     return C
@@ -312,7 +312,7 @@ At each recursive level:
 
 - The matrices are divided into blocks of size `n/2`.
 - Only two recursive matrix multiplications are performed.
-- Matrix additions and subtractions require `O(n²)` time.
+- Matrix additions and subtractions require $O(n^2)$ time.
 
 Therefore:
 
@@ -382,7 +382,7 @@ O(n^2)
 
 time.
 
-## 11. Why the Algorithm is O(n²)
+## 11. Why the Algorithm is $O(n^2)$
 
 The key improvement comes from exploiting the repeated blocks.
 
@@ -552,4 +552,4 @@ and hence:
 T(n)=O(n^2)
 \]
 
-Therefore, the special structure allows the matrix multiplication to be performed in the required O(n²) time.
+Therefore, the special structure allows the matrix multiplication to be performed in the required $O(n^2)$ time.
