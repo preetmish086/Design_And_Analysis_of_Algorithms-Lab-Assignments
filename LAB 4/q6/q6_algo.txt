@@ -1,0 +1,58 @@
+ALGORITHM-
+Step 1
+Create two events for every interval:
+(left endpoint, +1)
+(right endpoint, -1)
+
+Step 2
+Sort all 2n events by position.
+If two events have the same position:
+Process start before end.
+
+Step 3
+Maintain:
+current = 0
+maximum = 0
+maxPoint = 0
+
+Step 4
+Traverse the events:
+Start → current++
+End → current--
+Whenever:
+current > maximum
+update:
+maximum = current
+maxPoint = event.point
+
+Step 5
+Print:
+The point p
+Maximum number of intervals containing p
+
+
+PSEUDOCODE-
+Create two events for every interval
+left endpoint  → Start (+1)
+right endpoint → End (-1)
+sort events by position
+if positions are equal:
+    Start comes before End
+
+current = 0
+maximum = 0
+
+for each event:
+
+    if event is Start
+        current++
+
+        if current > maximum
+            maximum = current
+            maxPoint = event.position
+
+    else
+        current--
+
+print maxPoint
+print maximum

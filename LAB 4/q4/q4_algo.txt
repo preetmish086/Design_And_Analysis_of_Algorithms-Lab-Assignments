@@ -1,0 +1,60 @@
+ALGORITHM-
+1. Create 2 events, entry and exit for each person. n people, 2n events
+2. Sort the 2n events according to time.
+3. initialize curr, max and maxtime to 0.
+4. Traverse the sorted elements.
+    If event is entry, curr++
+    If event is exit, curr--
+    If curr>max, 
+        max=curr
+        maxtime=event.time
+5. print max and maxtime
+
+
+PSEUDOCODE-
+Create an event for every entry and exit
+
+for each person
+    event(entry_time, +1)
+    event(exit_time, -1)
+
+sort all events by time
+
+current = 0
+maximum = 0
+
+for each event
+    if event is entry
+        current++
+    else
+        current--
+
+    if current > maximum
+        maximum = current
+        maxTime = event.time
+
+print maxTime
+print maximum
+
+
+TIME COMPLEXITY-
+There are 2n events
+Sorting them takes:
+
+O(2nlog(2n))
+
+which simplifies to:
+
+O(nlogn)
+
+The final scan takes:
+
+O(n)
+
+Therefore:
+
+O(nlogn)
+
+Space complexity:
+
+O(n) because we store 2n events.

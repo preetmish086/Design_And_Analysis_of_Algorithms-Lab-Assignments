@@ -1,0 +1,45 @@
+ALGORITHM-
+1. Read all the intervals.
+2. Sort according to the starting point.
+3. Set first interval as curr interval.
+4. For all other intervals, compare the starting point with the curr ending point-
+        If less or equal, intervals overlap.
+            Extend the curr ending point
+        Else store the curr interval and start a new curr interval.
+5. Store the final curr interval.
+6. Print the merged intervals.
+
+
+PSEUDOCODE-
+MergeIntervals(intervals, n)
+
+    sort intervals by starting point
+
+    currStart = intervals[0].start
+    currEnd = intervals[0].end
+
+    for i = 1 to n-1
+
+        if intervals[i].start <= currEnd
+
+            currEnd = max(currEnd,
+                             intervals[i].end)
+
+        else
+
+            output (currStart, currEnd)
+
+            currStart = intervals[i].start
+            currEnd = intervals[i].end
+
+    output (currStart, currEnd) 
+
+
+TIME COMPLEXITY-
+Merge Sort- O(nlogn)
+After sorting, scan elements- O(n)
+Therefore TC-> O(nlogn)
+
+
+SPACE COMPLEXITY-
+O(n)

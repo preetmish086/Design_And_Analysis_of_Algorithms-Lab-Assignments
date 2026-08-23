@@ -1,0 +1,34 @@
+ALGORITHM-
+
+Sort one of the two sets and then use binary search.
+If we sort S2,
+Then for every element in S1, we need to find:
+b=x−a
+in S2.
+Since S2 is sorted, we can search for b using binary search.
+
+Steps:
+1. Read S1, S2, and x.
+2. Sort S2 using merge sort.
+3. For every element a in S1:
+4. Calculate required = x - a.
+5. Perform binary search for required in S2.
+6. If binary search finds the required element, a valid pair exists.
+7. If no element of S1 produces a match, no such pair exists.
+
+
+FindPair(S1, S2, n, x)
+
+    sort S2
+
+    for each element a in S1
+        required = x - a
+
+        if binary_search(S2, required)
+            return YES
+
+    return NO
+
+
+TIME COMPLEXITY-
+O(nlogn)

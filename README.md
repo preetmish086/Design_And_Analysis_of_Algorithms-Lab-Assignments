@@ -20,10 +20,9 @@ The objective of this repository is to implement, analyze and compare classical 
 | **Semester**  | 3rd Semester                     |
 | **Institute** | IIIT Bhubaneswar                 |
 
----
+---  
 
-# Repository Structure
-
+# Repository Structure  
 ```text
 DAA-Lab
 │
@@ -52,41 +51,70 @@ DAA-Lab
 │   │
 │   └── README.md
 │
-├LAB 3/
-├── q1/
-│   ├── q1.c
-│   └── q1_analysis.md
-├── q2/
-│   ├── q2.c
-│   └── q2_analysis.md
-├── q3/
-│   ├── q3.c
-│   └── q3_analysis.md
-├── q4/
-│   ├── q4.c
-│   └── q4_analysis.md
-├── q5/
-│   ├── q5.c
-│   └── q5_analysis.md
-└── q6/
-    ├── q6.c
-    └── q6_analysis.md
+├── Lab 3
+│   ├── q1
+│   │   ├── q1.c
+│   │   └── q1_analysis.md
+│   │
+│   ├── q2
+│   │   ├── q2.c
+│   │   └── q2_analysis.md
+│   │
+│   ├── q3
+│   │   ├── q3.c
+│   │   └── q3_analysis.md
+│   │
+│   ├── q4
+│   │   ├── q4.c
+│   │   └── q4_analysis.md
+│   │
+│   ├── q5
+│   │   ├── q5.c
+│   │   └── q5_analysis.md
+│   │
+│   └── q6
+│       ├── q6.c
+│       └── q6_analysis.md
+│
+├── Lab 4
+│   ├── q1
+│   │   ├── q1.c
+│   │   └── q1_algo.txt
+│   │
+│   ├── q2
+│   │   ├── q2.c
+│   │   └── q2_algo.txt
+│   │
+│   ├── q3
+│   │   ├── q3.c
+│   │   └── q3_algo.txt
+│   │
+│   ├── q4
+│   │   ├── q4.c
+│   │   └── q4_algo.txt
+│   │
+│   ├── q5
+│   │   ├── q5.c
+│   │   └── q5_algo.txt
+│   │
+│   ├── q6
+│   │   ├── q6.c
+│   │   └── q6_algo.txt
+│   │
+│   └── README.md
 │
 ├── README.md
-└── .gitignore
-```
-
+└── .gitignore  
+```  
 ---
 
 # Laboratory Assignments
-
-| Lab   | Topics Covered                                                                                          | Status |
-| ----- | ------------------------------------------------------------------------------------------------------- | :----: |
-| Lab 1 | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness |    ✅   |
-| Lab 2 | Dictionary Operations, Merge Sort Comparison, k-way Merging                                             |    ✅   |
-| Lab 3 | Binary vs Ternary Search, Defective Coin, Min-Max using Pairwise Comparison, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort |    ✅   |
-| Lab 4 | ...                                                                                                     |   ...  |
-| Lab 5 | ...                                                                                                     |   ...  |
+Lab	Topics Covered	Status
+Lab 1	Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness	✅
+Lab 2	Dictionary Operations, Merge Sort Comparison, k-way Merging	✅
+Lab 3	Binary vs Ternary Search, Defective Coin, Min-Max using Pairwise Comparison, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort	✅
+Lab 4	Applications of Sorting	✅
+Lab 5	...	...  
 
 ---
 
@@ -118,6 +146,18 @@ Throughout the laboratory assignments, the following algorithmic techniques are 
 * Randomized Algorithms
 * Time Complexity Analysis
 * Space Complexity Analysis
+* Sorting-based Problem Solving
+* Counting/Bucket-Based Sorting
+* Merge Sort
+* Binary Search
+* Combination Generation
+* Recursive Search
+* Event-Based Sorting
+* Sweep-Line Technique
+* Interval Merging
+* Interval Overlap Analysis
+* Event Ordering
+* Maintaining Active Intervals
 
 ---
 
@@ -144,7 +184,9 @@ Each laboratory folder contains:
 
 For **Lab 2**, experimental data is stored in CSV format and can be imported into **Microsoft Excel** to generate the required performance graphs.
 
-For **Lab 3**, each question contains its corresponding C implementation and documentation, including algorithm explanation, correctness analysis, comparison counting, recurrence analysis, and complexity analysis where applicable.
+For **Lab 3**, each question contains its corresponding C implementation and documentation, including algorithm explanation, correctness analysis, comparison counting, recurrence analysis, and complexity analysis where applicable.  
+
+For Lab 4, each question contains its corresponding C implementation and algorithm description. The problems focus on applying sorting, binary search, event processing, and sweep-line techniques to practical problems involving colours, sets, target sums, party attendance, and intervals.
 
 ---
 
@@ -249,7 +291,17 @@ Lab 3 contains:
 | Q3 | Pairwise Min-Max | `O(n)` |
 | Q4 | Strassen's Matrix Multiplication | `O(n^log₂7)` ≈ `O(n^2.807)` |
 | Q5 | Special-Pattern Matrix Multiplication | `O(n²)` |
-| Q6 | Selection Sort | `Θ(n²)` |
+| Q6 | Selection Sort | `Θ(n²)` |  
+
+### Lab 4
+| Question | Algorithm | Complexity |
+| -------- | --------- | ---------- |
+| Q1 | Sorting elements by colour | `O(n)` |
+| Q2 | Pair with given sum | `O(n log n)` |
+| Q3 | k elements with given sum | `O(n^(k-1) log n)` |
+| Q4 | Max Simultaneous party attendance | `O(n log n)` |
+| Q5 | Merge overlapping intervals | `O(n log n)` |
+| Q6 | Point with maximum interval overlap | `O(n log n)` |
 
 ---
 

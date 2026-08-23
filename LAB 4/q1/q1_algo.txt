@@ -1,0 +1,51 @@
+ALGORITHM-
+Input- n pairs (number, colour) already sorted by number.
+Output: Items sorted as Red → Blue → Yellow.
+
+1. Create three arrays red, blue, and yellow.
+2. Set their respective counters to 0.
+3. Traverse the input array from 0 to n-1.
+4. For each item:
+    >If colour is r, store its number and colour in red.
+    >If colour is b, store its number and colour in blue.
+    >If colour is y, store its number and colour in yellow.
+5. Print all elements (number and colour) of red.
+6. Print all elements (number and colour) of blue.
+7. Print all elements (number and colour) of yellow.
+
+
+PSEUDOCODE-
+SortByColour(A, n)
+
+    create arrays red, blue, yellow
+    r = 0
+    b = 0
+    y = 0
+
+    for i = 0 to n-1
+        if A[i].colour == 'R'
+            red[r].number = A[i].number
+            red[r].colour = A[i].colour
+            r++
+
+        else if A[i].colour == 'B'
+            blue[b].number = A[i].number
+            blue[b].colour = A[i].colour
+            b++
+
+        else
+            yellow[y].number = A[i].number
+            yellow[b].colour = A[i].colour
+            y++
+
+    print red
+    print blue
+    print yellow
+
+
+TIME COMPLEXITY-
+O(n) since we traverse the input only once.
+
+
+SPACE COMPLEXITY-
+O(N) due to the three extra arrays that can hold at most n elements.
