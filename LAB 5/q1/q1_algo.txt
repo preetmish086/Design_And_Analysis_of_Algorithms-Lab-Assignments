@@ -1,0 +1,63 @@
+ALGORITHM-
+
+1. Read N elements for the array.
+2. if N is odd-
+        Find the (N/2)th element using QuickSelect, considering zero based indexing.
+        This value is the median.
+3. If N is even-
+        Find the (N/2-1)th smallest element.
+        Find the (N/2)th smallest element.
+        Take their average.
+        This value is the median.
+4. Display the median.
+
+
+PSEUDOCODE-
+
+QuickSelect(A, low, high, k)
+    if low==high    
+        return A[low]
+
+    pivotindex <- Partition(A, low, high)
+
+    if k==pivotindex
+        return A[k]
+    else if k<pivotindex
+        return QuickSelect(A, low, pivotindex-1, k)
+    else
+        return QuickSelect(A, pivotindex+1, high, k)
+
+Partition(A, low, high)
+    pivot <- A[high]
+    i <- low-1
+    for j <- low to high - 1
+        if A[j]<=pivot
+            i <- i+1
+            swap A[i] and A[j]
+    swap A[i+1] and A[high]
+    return i+1
+
+FIND_MEDIAN(A, N)
+
+    if N is odd
+        k ← N / 2
+        return QUICKSELECT(A, 0, N-1, k)
+
+    else
+        k1 ← N/2 - 1
+        k2 ← N/2
+
+        x ← QUICKSELECT(A, 0, N-1, k1)
+        y ← QUICKSELECT(A, 0, N-1, k2)
+
+        return (x + y) / 2
+
+
+TIME COMPLEXITY-
+Best/Average Case: O(n)
+Worst Case: O(n^2)
+
+
+SPACE COMPLEXITY-
+Average: O(log n)
+Worst: O(n)

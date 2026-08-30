@@ -1,0 +1,38 @@
+ALGORITHM-
+
+1. Read N elements.
+2. Read k.
+3. Check that 1 ≤ k ≤ N.
+4. Apply Quickselect.
+5. Return the element at index k-1.
+6. Display the kth smallest element.
+
+
+PSEUDOCODE-
+
+KTH_SMALLEST(A, low, high, k)
+
+    if low == high
+        return A[low]
+
+    pivotIndex ← PARTITION(A, low, high)
+
+    if k == pivotIndex
+        return A[k]
+
+    else if k < pivotIndex
+        return KTH_SMALLEST(A, low, pivotIndex - 1, k)
+
+    else
+        return KTH_SMALLEST(A, pivotIndex + 1, high, k)
+
+
+TIME COMPLEXITY-
+Best Case O(n)
+Average Case O(n)
+Worst Case O(n^2)
+
+
+SPACE COMPLEXITY-
+Average Case O(log n)
+Worst Case O(n)

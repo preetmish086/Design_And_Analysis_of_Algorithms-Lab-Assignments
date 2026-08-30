@@ -13,7 +13,7 @@ Generate combinations of k-1 elements using recursion.
 
 Step 3 - Calculate required element
 
-If the selected elements have  sum:
+If the selected elemen0ts have  sum:
 required=T−sum
 
 Step 4 - Binary search

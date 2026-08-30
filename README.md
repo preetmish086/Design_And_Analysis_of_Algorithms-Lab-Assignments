@@ -247,7 +247,7 @@ gcc Q1/binary_ternary_search.c -o Q1
 
 # Laboratory Contents
 
-## Lab 1
+## Lab 1  
 
 Lab 1 contains:
 
@@ -260,7 +260,7 @@ Lab 1 contains:
 
 ---
 
-## Lab 2
+## Lab 2  
 
 Lab 2 contains:
 
@@ -270,7 +270,7 @@ Lab 2 contains:
 
 ---
 
-## Lab 3
+## Lab 3  
 
 Lab 3 contains:
 
@@ -281,7 +281,7 @@ Lab 3 contains:
 * **Q5:** Special-Pattern Matrix Multiplication using Divide and Conquer
 * **Q6:** Loop Invariants and Selection Sort
 
-### Lab 3 Complexity Highlights
+### Lab 3 Complexity Highlights  
 
 | Question | Algorithm | Complexity |
 | -------- | --------- | ---------- |
@@ -293,7 +293,8 @@ Lab 3 contains:
 | Q5 | Special-Pattern Matrix Multiplication | `O(n²)` |
 | Q6 | Selection Sort | `Θ(n²)` |  
 
-### Lab 4
+### Lab 4  
+
 | Question | Algorithm | Complexity |
 | -------- | --------- | ---------- |
 | Q1 | Sorting elements by colour | `O(n)` |
@@ -301,7 +302,16 @@ Lab 3 contains:
 | Q3 | k elements with given sum | `O(n^(k-1) log n)` |
 | Q4 | Max Simultaneous party attendance | `O(n log n)` |
 | Q5 | Merge overlapping intervals | `O(n log n)` |
-| Q6 | Point with maximum interval overlap | `O(n log n)` |
+| Q6 | Point with maximum interval overlap | `O(n log n)` |  
+
+### Lab 5  
+
+| Question | Algorithm | Complexity |
+| -------- | --------- | ---------- |
+| Q1 | Median using Quickselect | `O(n)` average, `O(n²)` worst |
+| Q2 | kth Smallest Element using Quickselect | `O(n)` average, `O(n²)` worst |
+| Q3 | Quick Sort | `O(n log n)` average, `O(n²)` worst |
+| Q4 | Heap Sort | `O(n log n)` |
 
 ---
 

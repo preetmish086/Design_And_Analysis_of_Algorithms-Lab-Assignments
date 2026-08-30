@@ -119,5 +119,6 @@ int main()
     printf("\nPoint with maximum overlap: %d\n", maxPoint);
     printf("Maximum number of intervals: %d\n", maximum);
 
+    
     return 0;
 }

@@ -1,0 +1,56 @@
+ALGORITHM-
+
+1. Generate N random elements.
+2. Store them in a file.
+3. Read the elements from the file.
+4. Build a Max Heap.
+5. Swap the root with the last element.
+6. Reduce the heap size by one.
+7. Heapify the root.
+8. Repeat until only one element remains.
+9. The array is sorted in ascending order.
+
+
+PSEUDOCODE-
+
+HEAPIFY(A, N, i)
+
+    largest ← i
+
+    left ← 2*i + 1
+
+    right ← 2*i + 2
+
+    if left < N AND A[left] > A[largest]
+        largest ← left
+
+    if right < N AND A[right] > A[largest]
+        largest ← right
+
+    if largest ≠ i
+
+        swap A[i], A[largest]
+
+        HEAPIFY(A, N, largest)
+
+
+HEAPSORT(A, N)
+
+    for i ← N/2 - 1 down to 0
+
+        HEAPIFY(A, N, i)
+
+    for i ← N-1 down to 1
+
+        swap A[0], A[i]
+
+        HEAPIFY(A, i, 0)
+
+
+
+TIME COMPLEXITY-
+O(n log n)
+
+
+SPACE COMPLEXITY-
+O(1)
