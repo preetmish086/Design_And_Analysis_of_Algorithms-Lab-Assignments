@@ -1,8 +1,11 @@
 # Design and Analysis of Algorithms (DAA) Laboratory
 
 ![Language](https://img.shields.io/badge/Language-C-blue.svg)
+
 ![Course](https://img.shields.io/badge/Course-DAA-success.svg)
+
 ![Semester](https://img.shields.io/badge/Semester-3rd-green.svg)
+
 ![Institute](https://img.shields.io/badge/Institute-IIIT%20Bhubaneswar-orange.svg)
 
 This repository contains all the programming assignments completed as part of the **Design and Analysis of Algorithms (DAA) Laboratory**.
@@ -20,9 +23,10 @@ The objective of this repository is to implement, analyze and compare classical 
 | **Semester**  | 3rd Semester                     |
 | **Institute** | IIIT Bhubaneswar                 |
 
----  
+---
 
-# Repository Structure  
+# Repository Structure
+
 ```text
 DAA-Lab
 │
@@ -103,18 +107,40 @@ DAA-Lab
 │   │
 │   └── README.md
 │
+├── Lab 5
+│   ├── q1
+│   │   ├── q1.c
+│   │   └── q1_algo.txt
+│   │
+│   ├── q2
+│   │   ├── q2.c
+│   │   └── q2_algo.txt
+│   │
+│   ├── q3
+│   │   ├── q3.c
+│   │   └── q3_algo.txt
+│   │
+│   ├── q4
+│   │   ├── q4.c
+│   │   └── q4_algo.txt
+│   │
+│   └── README.md
+│
 ├── README.md
-└── .gitignore  
-```  
+└── .gitignore
+```
+
 ---
 
 # Laboratory Assignments
-Lab	Topics Covered	Status
-Lab 1	Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness	✅
-Lab 2	Dictionary Operations, Merge Sort Comparison, k-way Merging	✅
-Lab 3	Binary vs Ternary Search, Defective Coin, Min-Max using Pairwise Comparison, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort	✅
-Lab 4	Applications of Sorting	✅
-Lab 5	...	...  
+
+| Lab   | Topics Covered                                                                                                                                                                         | Status |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Lab 1 | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness                                                                                | ✅      |
+| Lab 2 | Dictionary Operations, Merge Sort Comparison, k-way Merging                                                                                                                            | ✅      |
+| Lab 3 | Binary vs Ternary Search, Defective Coin, Min-Max using Pairwise Comparison, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort | ✅      |
+| Lab 4 | Applications of Sorting                                                                                                                                                                | ✅      |
+| Lab 5 | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                                                     | ✅      |
 
 ---
 
@@ -129,6 +155,9 @@ Throughout the laboratory assignments, the following algorithmic techniques are 
 * Selection Sort
 * Merge Sort
 * Modified 3-way Merge Sort
+* Quick Sort
+* Heap Sort
+* Quickselect
 * Dictionary Operations
 * Arrays and Linked Lists
 * Binary Search
@@ -144,12 +173,16 @@ Throughout the laboratory assignments, the following algorithmic techniques are 
 * Pairwise Merging
 * k-way Merging
 * Randomized Algorithms
+* Selection Algorithms
+* Order Statistics
+* Median Finding
+* kth Smallest Element
+* Partitioning
+* Heap Construction
 * Time Complexity Analysis
 * Space Complexity Analysis
 * Sorting-based Problem Solving
 * Counting/Bucket-Based Sorting
-* Merge Sort
-* Binary Search
 * Combination Generation
 * Recursive Search
 * Event-Based Sorting
@@ -163,11 +196,11 @@ Throughout the laboratory assignments, the following algorithmic techniques are 
 
 # Programming Language
 
-* C
+* **C**
 
 Compiler used:
 
-* GCC (GNU Compiler Collection)
+* **GCC (GNU Compiler Collection)**
 
 ---
 
@@ -180,13 +213,15 @@ Each laboratory folder contains:
 * Graph generation programs
 * Graph images where applicable
 * Individual README describing the assignment
-* Complexity analysis
+* Algorithm and complexity analysis
 
 For **Lab 2**, experimental data is stored in CSV format and can be imported into **Microsoft Excel** to generate the required performance graphs.
 
-For **Lab 3**, each question contains its corresponding C implementation and documentation, including algorithm explanation, correctness analysis, comparison counting, recurrence analysis, and complexity analysis where applicable.  
+For **Lab 3**, each question contains its corresponding C implementation and documentation, including algorithm explanation, correctness analysis, comparison counting, recurrence analysis, and complexity analysis where applicable.
 
-For Lab 4, each question contains its corresponding C implementation and algorithm description. The problems focus on applying sorting, binary search, event processing, and sweep-line techniques to practical problems involving colours, sets, target sums, party attendance, and intervals.
+For **Lab 4**, each question contains its C implementation along with the corresponding algorithm and complexity analysis for sorting-based applications.
+
+For **Lab 5**, each question contains its C implementation and algorithm analysis. The laboratory focuses on **selection algorithms and comparison-based sorting**, including Quickselect, Quick Sort, and Heap Sort. Questions involving Quick Sort and Heap Sort also demonstrate sorting of randomly generated elements stored in files.
 
 ---
 
@@ -204,13 +239,19 @@ The aim of these laboratory assignments is to:
 * Analyze recursive algorithms using recurrence relations.
 * Apply loop invariants to prove algorithm correctness.
 * Minimize the number of comparisons in algorithms.
+* Understand selection algorithms and order statistics.
+* Find the median without explicitly sorting the input.
+* Find the kth smallest element using partitioning.
+* Understand the working of Quick Sort.
+* Understand heap construction and Heap Sort.
+* Work with randomly generated input stored in files.
 * Improve problem-solving skills using C programming.
 
 ---
 
 # How to Use
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/<username>/DAA-Lab.git
@@ -243,11 +284,31 @@ gcc Q1/binary_ternary_search.c -o Q1
 ./Q1
 ```
 
+For **Lab 4**, navigate to the corresponding question folder and compile the required C program.
+
+Example:
+
+```bash
+gcc q1/q1.c -o q1
+./q1
+```
+
+For **Lab 5**, navigate to the required question folder and compile the corresponding C program.
+
+Example:
+
+```bash
+gcc q1/q1.c -o q1
+./q1
+```
+
+For questions involving file-based sorting, the program generates or reads the required random elements from a file as specified by the implementation.
+
 ---
 
 # Laboratory Contents
 
-## Lab 1  
+## Lab 1
 
 Lab 1 contains:
 
@@ -260,7 +321,7 @@ Lab 1 contains:
 
 ---
 
-## Lab 2  
+## Lab 2
 
 Lab 2 contains:
 
@@ -270,7 +331,7 @@ Lab 2 contains:
 
 ---
 
-## Lab 3  
+## Lab 3
 
 Lab 3 contains:
 
@@ -281,37 +342,83 @@ Lab 3 contains:
 * **Q5:** Special-Pattern Matrix Multiplication using Divide and Conquer
 * **Q6:** Loop Invariants and Selection Sort
 
-### Lab 3 Complexity Highlights  
+### Lab 3 Complexity Highlights
 
-| Question | Algorithm | Complexity |
-| -------- | --------- | ---------- |
-| Q1 | Binary Search | `O(log₂ n)` |
-| Q1 | Ternary Search | `O(log₃ n)` |
-| Q2 | Defective Coin | `O(log n)` |
-| Q3 | Pairwise Min-Max | `O(n)` |
-| Q4 | Strassen's Matrix Multiplication | `O(n^log₂7)` ≈ `O(n^2.807)` |
-| Q5 | Special-Pattern Matrix Multiplication | `O(n²)` |
-| Q6 | Selection Sort | `Θ(n²)` |  
+| Question | Algorithm                             | Complexity                  |
+| -------- | ------------------------------------- | --------------------------- |
+| Q1       | Binary Search                         | `O(log₂ n)`                 |
+| Q1       | Ternary Search                        | `O(log₃ n)`                 |
+| Q2       | Defective Coin                        | `O(log n)`                  |
+| Q3       | Pairwise Min-Max                      | `O(n)`                      |
+| Q4       | Strassen's Matrix Multiplication      | `O(n^log₂7)` ≈ `O(n^2.807)` |
+| Q5       | Special-Pattern Matrix Multiplication | `O(n²)`                     |
+| Q6       | Selection Sort                        | `Θ(n²)`                     |
 
-### Lab 4  
+---
 
-| Question | Algorithm | Complexity |
-| -------- | --------- | ---------- |
-| Q1 | Sorting elements by colour | `O(n)` |
-| Q2 | Pair with given sum | `O(n log n)` |
-| Q3 | k elements with given sum | `O(n^(k-1) log n)` |
-| Q4 | Max Simultaneous party attendance | `O(n log n)` |
-| Q5 | Merge overlapping intervals | `O(n log n)` |
-| Q6 | Point with maximum interval overlap | `O(n log n)` |  
+## Lab 4
 
-### Lab 5  
+Lab 4 contains:
 
-| Question | Algorithm | Complexity |
-| -------- | --------- | ---------- |
-| Q1 | Median using Quickselect | `O(n)` average, `O(n²)` worst |
-| Q2 | kth Smallest Element using Quickselect | `O(n)` average, `O(n²)` worst |
-| Q3 | Quick Sort | `O(n log n)` average, `O(n²)` worst |
-| Q4 | Heap Sort | `O(n log n)` |
+* **Q1:** Sorting elements by colour
+* **Q2:** Pair with given sum
+* **Q3:** k elements with given sum
+* **Q4:** Maximum simultaneous party attendance
+* **Q5:** Merge overlapping intervals
+* **Q6:** Point with maximum interval overlap
+
+### Lab 4 Complexity Highlights
+
+| Question | Algorithm                           | Complexity         |
+| -------- | ----------------------------------- | ------------------ |
+| Q1       | Sorting elements by colour          | `O(n)`             |
+| Q2       | Sorting + Binary Search             | `O(n log n)`       |
+| Q3       | Recursive selection + Binary Search | `O(n^(k-1) log n)` |
+| Q4       | Event Sorting + Sweep Line          | `O(n log n)`       |
+| Q5       | Sorting + Interval Merging          | `O(n log n)`       |
+| Q6       | Event Sorting + Sweep Line          | `O(n log n)`       |
+
+---
+
+## Lab 5
+
+Lab 5 focuses on **selection algorithms and comparison-based sorting algorithms**.
+
+The laboratory contains the following problems:
+
+* **Q1:** Find the median of a list of `N` numbers without sorting the list.
+* **Q2:** Find the kth smallest element in a list of `N` numbers without sorting the list.
+* **Q3:** Implement Quick Sort for `N` randomly generated elements stored in a file.
+* **Q4:** Implement Heap Sort for `N` randomly generated elements stored in a file.
+
+### Lab 5 Complexity Highlights
+
+| Question | Algorithm                      | Complexity                               |
+| -------- | ------------------------------ | ---------------------------------------- |
+| Q1       | Median using Quickselect       | `O(n)` average, `O(n²)` worst case       |
+| Q2       | kth Smallest using Quickselect | `O(n)` average, `O(n²)` worst case       |
+| Q3       | Quick Sort                     | `O(n log n)` average, `O(n²)` worst case |
+| Q4       | Heap Sort                      | `O(n log n)`                             |
+
+### Lab 5 Key Concepts
+
+**Quickselect** is a selection algorithm based on the partitioning technique used in Quick Sort. Instead of recursively processing both partitions, it continues only in the partition containing the desired element. This allows the median or kth smallest element to be found without completely sorting the list.
+
+**Quick Sort** recursively partitions the array around a pivot and sorts the resulting subarrays. Its average-case complexity is `O(n log n)`, while an unfavorable sequence of pivots can result in `O(n²)` time.
+
+**Heap Sort** first constructs a max heap and repeatedly extracts the maximum element to produce the sorted array. It provides a guaranteed `O(n log n)` time complexity.
+
+---
+
+# Complexity Summary
+
+| Lab   | Main Techniques                                      | Complexity Highlights            |
+| ----- | ---------------------------------------------------- | -------------------------------- |
+| Lab 1 | Basic algorithms, sorting, recursion                 | Varies by problem                |
+| Lab 2 | Dictionaries, Merge Sort, k-way Merging              | `O(n)`, `O(n log n)` and related |
+| Lab 3 | Searching, Divide and Conquer, Matrix Multiplication | `O(log n)` to `O(n².807)`        |
+| Lab 4 | Sorting Applications, Sweep Line                     | `O(n)` to `O(n log n)`           |
+| Lab 5 | Quickselect, Quick Sort, Heap Sort                   | `O(n)` average to `O(n log n)`   |
 
 ---
 
