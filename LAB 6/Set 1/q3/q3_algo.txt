@@ -1,0 +1,55 @@
+ALGORITHM-
+1. Read two strings X and Y.
+2. Let their lengths be m and n.
+3. Create a DP table dp[m+1][n+1].
+4. Initialize the first row and first column to 0.
+5.  For every pair of characters:
+        If X[i-1] == Y[j-1], then:
+        dp[i][j] = dp[i-1][j-1] + 1
+    Otherwise:
+        dp[i][j] = max(dp[i-1][j],dp[i][j-1])
+6. dp[m][n] gives the length of the LCS.
+7. Trace backward through the table to construct the actual subsequence.
+
+
+PSEUDOCODE-
+LCS(X, Y, m, n)
+
+1. Create dp[0...m][0...n]
+
+2. For i ← 0 to m
+       dp[i][0] ← 0
+
+3. For j ← 0 to n
+       dp[0][j] ← 0
+
+4. For i ← 1 to m
+       For j ← 1 to n
+           If X[i-1] = Y[j-1]
+               dp[i][j] ← dp[i-1][j-1] + 1
+           Else
+               dp[i][j] ← max(dp[i-1][j], dp[i][j-1])
+
+5. length ← dp[m][n]
+
+6. Set i ← m, j ← n
+   Create empty string lcs
+
+7. While i > 0 AND j > 0
+       If X[i-1] = Y[j-1]
+           Add X[i-1] to lcs
+           i ← i - 1
+           j ← j - 1
+       Else if dp[i-1][j] > dp[i][j-1]
+           i ← i - 1
+       Else
+           j ← j - 1
+
+8. Reverse lcs
+
+9. Display length and lcs
+
+
+COMPLEXITY ANALYSIS-
+Time Complexity: O(mn)
+Space Complexity: O(mn)

@@ -13,7 +13,7 @@ Generate combinations of k-1 elements using recursion.
 
 Step 3 - Calculate required element
 
-If the selected elemen0ts have  sum:
+If the selected elements have sum sum:
 required=T−sum
 
 Step 4 - Binary search
@@ -25,3 +25,6 @@ If found, check that we aren't using the same array element twice.
 Step 5
 
 If any valid combination is found: YES otherwise NO
+
+TIME COMPLEXITY (Merge Sort)-
+O(n log n)

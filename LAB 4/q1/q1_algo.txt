@@ -48,4 +48,4 @@ O(n) since we traverse the input only once.
 
 
 SPACE COMPLEXITY-
-O(N) due to the three extra arrays that can hold at most n elements.
+O(n) due to the three extra arrays that can hold at most n elements.

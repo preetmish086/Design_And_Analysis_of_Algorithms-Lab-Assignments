@@ -1,0 +1,294 @@
+We are given a permutation:
+p = [p₁, p₂, …, pₙ]
+and the only allowed operation is:
+reverse(p, i, j)
+which reverses the elements from position i through j.
+
+The cost is:
+cost(reverse(p, i, j)) = j − i + 1
+
+We need an algorithm with total cost:
+O(n log² n)
+
+## Part A — Showing O(n) Reversals Are Sufficient
+
+### Algorithm
+
+We can sort the permutation from left to right.
+
+For position i:
+
+1. Find the position j containing i.
+2. Reverse the section [i … j].
+3. Now i is placed at position i.
+4. Continue with i + 1.
+
+### Pseudocode
+
+**SIMPLE_SORT(p, n)**
+
+1. For value ← 1 to n:
+
+   * Find position j of value.
+   * If j ≠ value:
+
+     * reverse(p, value, j)
+
+### Why Does It Work?
+
+After placing value i, we never touch position i again.
+
+Therefore, after at most n − 1 reversals, the permutation becomes:
+
+[1, 2, …, n]
+
+Hence:
+
+Number of reversals ≤ n − 1 = O(n)
+
+However, the cost can be as large as:
+
+O(n²)
+
+because one reversal can have length O(n).
+
+---
+
+## Part B — O(n log² n) Cost Algorithm
+
+The key idea is **divide and conquer**.
+
+Instead of placing individual elements, we recursively divide the values into two groups:
+
+[1, …, ⌊n/2⌋]
+
+and
+
+[⌊n/2⌋ + 1, …, n]
+
+We first rearrange the permutation so that all smaller values occur before all larger values, and then recursively sort the two halves.
+
+The important part is doing this partition using reversals.
+
+## 1. Algorithm — Reversal-Based Stable Partition
+
+Suppose a sequence contains two types:
+
+* L = element belongs to the left half
+* R = element belongs to the right half
+
+For example:
+
+L R R L L R L
+
+We want:
+
+L L L L R R R
+
+We recursively partition the left and right portions and then combine them.
+
+If the middle contains:
+
+R R … R L L … L
+
+we can convert it to:
+
+L L … L R R … R
+
+using three reversals:
+
+1. reverse(first R block)
+2. reverse(L block)
+3. reverse(entire block)
+
+This is the standard reversal technique for swapping two adjacent blocks.
+
+## 2. Pseudocode — Stable Partition
+
+**STABLE_PARTITION(A, left, right, mid)**
+
+1. If left = right:
+
+   * Return
+
+2. mid1 ← (left + mid) / 2
+
+3. mid2 ← (mid + 1 + right) / 2
+
+4. Recursively partition the left half.
+
+5. Recursively partition the right half.
+
+6. Let:
+
+   * [right-elements] = [a … b]
+   * [left-elements] = [c … d]
+
+7. Reverse(a, b)
+
+8. Reverse(c, d)
+
+9. Reverse(a, d)
+
+The three reversals exchange the two adjacent blocks while preserving the internal order of each block.
+
+## 3. Complete Sorting Algorithm
+
+Let:
+
+midValue = (lowValue + highValue) / 2
+
+Partition the current sequence according to whether:
+
+p[i] ≤ midValue
+
+or
+
+p[i] > midValue
+
+Then recursively sort both portions.
+
+### Pseudocode
+
+**SORT(A, left, right, lowValue, highValue)**
+
+1. If left ≥ right:
+
+   * Return
+
+2. midValue ← (lowValue + highValue) / 2
+
+3. Stable-partition A[left … right] so that:
+
+   * values ≤ midValue come first
+   * values > midValue come second
+
+4. Let the partition point be pos.
+
+5. SORT(A, left, pos − 1, lowValue, midValue)
+
+6. SORT(A, pos, right, midValue + 1, highValue)
+
+Initially:
+
+SORT(A, 0, n − 1, 1, n)
+
+---
+
+## 4. Why the Cost is O(n log² n)
+
+At one recursion level, we need to perform a stable partition.
+
+For n elements, the stable partition can be implemented in:
+
+O(n log n)
+
+reversal cost.
+
+### Why?
+
+The partition itself is performed recursively.
+
+At each level of the partition recursion, the total length of the reversed blocks is O(n).
+
+There are:
+
+O(log n)
+
+levels.
+
+Therefore:
+
+P(n) = 2P(n/2) + O(n)
+
+giving:
+
+P(n) = O(n log n)
+
+Now the actual sorting algorithm has:
+
+T(n) = 2T(n/2) + O(n log n)
+
+Using the recursion-tree method:
+
+T(n) = O(n log n) + 2O((n/2) log(n/2)) + …
+
+Each level contributes O(n log n), and there are O(log n) levels.
+
+Therefore:
+
+T(n) = O(n log n) × O(log n)
+
+Hence:
+
+T(n) = O(n log² n)
+
+---
+
+## 5. Correctness Proof
+
+We prove correctness by induction.
+
+### Base Case
+
+For one element:
+
+n = 1
+
+the sequence is already sorted.
+
+Therefore, the algorithm is correct.
+
+### Inductive Hypothesis
+
+Assume the algorithm correctly sorts all sequences of size less than n.
+
+### Inductive Step
+
+For a sequence of size n, the stable partition places:
+
+1, …, ⌊n/2⌋
+
+before:
+
+⌊n/2⌋ + 1, …, n
+
+Thus, no element belonging to the right half occurs before an element belonging to the left half.
+
+The algorithm then recursively sorts both halves.
+
+By the inductive hypothesis, both halves become sorted.
+
+Since every element in the left half is smaller than every element in the right half, their concatenation is:
+
+[1, 2, …, n]
+
+Hence, the entire permutation is sorted.
+
+Therefore, by induction, the algorithm correctly sorts every permutation.
+
+---
+
+## 6. Complexity Analysis
+
+### Number of Reversals
+
+Each stable partition uses a logarithmic number of levels, and the complete divide-and-conquer process gives a polylogarithmic number of reversal operations overall.
+
+The important requirement is the **weighted reversal cost**, not merely the number of reversals.
+
+### Running Time
+
+O(n log² n)
+
+### Total Reversal Cost
+
+O(n log² n)
+
+### Auxiliary Space
+
+The recursive implementation requires:
+
+O(log n)
+
+recursion stack space, excluding the input array.

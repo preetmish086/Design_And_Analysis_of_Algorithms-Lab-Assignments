@@ -8,145 +8,94 @@
 
 ![Institute](https://img.shields.io/badge/Institute-IIIT%20Bhubaneswar-orange.svg)
 
-This repository contains all the programming assignments completed as part of the **Design and Analysis of Algorithms (DAA) Laboratory**.
+This repository contains all programming assignments for the **Design and Analysis of Algorithms (DAA) Laboratory**. The assignments focus on implementing algorithms, analyzing their complexity, and validating their performance through practical experimentation.
 
-The objective of this repository is to implement, analyze and compare classical algorithms while studying their time and space complexities through practical experimentation.
+## Student Information
 
----
-
-# Student Information
-
-| Field         | Details                          |
-| ------------- | -------------------------------- |
-| **Name**      | Preetika Mishra                  |
-| **Branch**    | Computer Science and Engineering |
-| **Semester**  | 3rd Semester                     |
-| **Institute** | IIIT Bhubaneswar                 |
+* **Name:** Preetika Mishra
+* **Branch:** CSE-B (1)
+* **Semester:** 3rd Semester
+* **Institute:** IIIT Bhubaneswar
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```text
-DAA-Lab
+DAA-Lab/
 │
-├── Lab 1
-│   ├── Code solutions
-│   ├── csv files
-│   ├── graphs
-│   ├── README.md
-│   └── ...
+├── Lab 1/
+│   ├── Code solutions/
+│   ├── csv files/
+│   ├── graphs/
+│   └── README.md
 │
-├── Lab 2
-│   ├── Q1
-│   │   ├── csv
-│   │   ├── plots
-│   │   └── ...
+├── Lab 2/
+│   ├── Q1/
+│   ├── Q2/
+│   ├── Q3/
+│   └── README.md
+│
+├── Lab 3/
+│   ├── q1/
+│   ├── q2/
+│   ├── q3/
+│   ├── q4/
+│   ├── q5/
+│   ├── q6/
+│   └── README.md
+│
+├── Lab 4/
+│   ├── q1/
+│   ├── q2/
+│   ├── q3/
+│   ├── q4/
+│   ├── q5/
+│   ├── q6/
+│   └── README.md
+│
+├── Lab 5/
+│   ├── q1/
+│   ├── q2/
+│   ├── q3/
+│   ├── q4/
+│   └── README.md
+│
+├── Lab 6/
+│   ├── Set 1/
+│   │   ├── q1/
+│   │   ├── q2/
+│   │   ├── q3/
+│   │   └── q4/
 │   │
-│   ├── Q2
-│   │   ├── mergesort_compare.c
-│   │   ├── mergesort_plot.gnu
-│   │   └── ...
-│   │
-│   ├── Q3
-│   │   ├── kway_merge_compare.c
-│   │   ├── kway_plot.gnu
-│   │   └── ...
+│   ├── Set 2/
+│   │   ├── q1/
+│   │   ├── q2/
+│   │   ├── q3/
+│   │   └── q4/
 │   │
 │   └── README.md
 │
-├── Lab 3
-│   ├── q1
-│   │   ├── q1.c
-│   │   └── q1_analysis.md
-│   │
-│   ├── q2
-│   │   ├── q2.c
-│   │   └── q2_analysis.md
-│   │
-│   ├── q3
-│   │   ├── q3.c
-│   │   └── q3_analysis.md
-│   │
-│   ├── q4
-│   │   ├── q4.c
-│   │   └── q4_analysis.md
-│   │
-│   ├── q5
-│   │   ├── q5.c
-│   │   └── q5_analysis.md
-│   │
-│   └── q6
-│       ├── q6.c
-│       └── q6_analysis.md
-│
-├── Lab 4
-│   ├── q1
-│   │   ├── q1.c
-│   │   └── q1_algo.txt
-│   │
-│   ├── q2
-│   │   ├── q2.c
-│   │   └── q2_algo.txt
-│   │
-│   ├── q3
-│   │   ├── q3.c
-│   │   └── q3_algo.txt
-│   │
-│   ├── q4
-│   │   ├── q4.c
-│   │   └── q4_algo.txt
-│   │
-│   ├── q5
-│   │   ├── q5.c
-│   │   └── q5_algo.txt
-│   │
-│   ├── q6
-│   │   ├── q6.c
-│   │   └── q6_algo.txt
-│   │
-│   └── README.md
-│
-├── Lab 5
-│   ├── q1
-│   │   ├── q1.c
-│   │   └── q1_algo.txt
-│   │
-│   ├── q2
-│   │   ├── q2.c
-│   │   └── q2_algo.txt
-│   │
-│   ├── q3
-│   │   ├── q3.c
-│   │   └── q3_algo.txt
-│   │
-│   ├── q4
-│   │   ├── q4.c
-│   │   └── q4_algo.txt
-│   │
-│   └── README.md
-│
-├── README.md
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-# Laboratory Assignments
+## Laboratory Assignments
 
-| Lab   | Topics Covered                                                                                                                                                                         | Status |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Lab 1 | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness                                                                                | ✅      |
-| Lab 2 | Dictionary Operations, Merge Sort Comparison, k-way Merging                                                                                                                            | ✅      |
-| Lab 3 | Binary vs Ternary Search, Defective Coin, Min-Max using Pairwise Comparison, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort | ✅      |
-| Lab 4 | Applications of Sorting                                                                                                                                                                | ✅      |
-| Lab 5 | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                                                     | ✅      |
+| Lab       | Topics                                                                                                                                                       | Status |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| **Lab 1** | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness                                                      | ✅      |
+| **Lab 2** | Dictionary Operations, Merge Sort Comparison, k-way Merging                                                                                                  | ✅      |
+| **Lab 3** | Binary vs Ternary Search, Defective Coin, Min-Max, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort | ✅      |
+| **Lab 4** | Applications of Sorting                                                                                                                                      | ✅      |
+| **Lab 5** | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                           | ✅      |
+| **Lab 6** | 1D Array Operations, 2D Matrix Operations, FFT-Based Convolution, Sorting via Reversal                                                                       | ✅      |
 
 ---
 
-# Algorithms Covered
-
-Throughout the laboratory assignments, the following algorithmic techniques are implemented and analyzed:
+## Algorithms Covered
 
 * Asymptotic Growth Analysis
 * Experimental Algorithm Analysis
@@ -191,43 +140,53 @@ Throughout the laboratory assignments, the following algorithmic techniques are 
 * Interval Overlap Analysis
 * Event Ordering
 * Maintaining Active Intervals
+* 1D Array Operations
+* 2D Matrix Operations
+* Matrix Addition
+* Matrix Multiplication
+* Matrix Transposition
+* Matrix Determinant
+* Symmetric Matrix Checking
+* Eigenvalue and Eigenvector Computation
+* Convolution
+* Fast Fourier Transform (FFT)
+* FFT-Based Divide and Conquer
+* Weighted Reversal Cost
+* Reversal-Based Sorting
+* Stable Partitioning
 
 ---
 
-# Programming Language
+## Programming Language
 
-* **C**
-
-Compiler used:
-
-* **GCC (GNU Compiler Collection)**
+* **Language:** C
+* **Compiler:** GCC
 
 ---
 
-# Folder Organization
+## Folder Organization
 
-Each laboratory folder contains:
+Each lab contains:
 
-* Source code (`.c`)
-* Generated CSV files
-* Graph generation programs
-* Graph images where applicable
-* Individual README describing the assignment
+* C source code (`.c`)
 * Algorithm and complexity analysis
+* CSV files where applicable
+* Graph generation programs and graphs where applicable
+* Individual README files
 
-For **Lab 2**, experimental data is stored in CSV format and can be imported into **Microsoft Excel** to generate the required performance graphs.
+Lab 2 includes experimental data that can be imported into Microsoft Excel for performance graphs.
 
-For **Lab 3**, each question contains its corresponding C implementation and documentation, including algorithm explanation, correctness analysis, comparison counting, recurrence analysis, and complexity analysis where applicable.
+Lab 3 contains C implementations and documentation for algorithm explanation, correctness analysis, comparison counting, recurrence analysis, and complexity analysis.
 
-For **Lab 4**, each question contains its C implementation along with the corresponding algorithm and complexity analysis for sorting-based applications.
+Lab 4 contains C implementations and algorithm/complexity analysis for sorting-based applications.
 
-For **Lab 5**, each question contains its C implementation and algorithm analysis. The laboratory focuses on **selection algorithms and comparison-based sorting**, including Quickselect, Quick Sort, and Heap Sort. Questions involving Quick Sort and Heap Sort also demonstrate sorting of randomly generated elements stored in files.
+Lab 5 contains C implementations and algorithm analysis for Quickselect, Quick Sort, and Heap Sort.
+
+Lab 6 contains C implementations and corresponding algorithm/complexity analysis for array operations, matrix operations, FFT-based convolution, and reversal-based sorting.
 
 ---
 
-# Learning Objectives
-
-The aim of these laboratory assignments is to:
+## Learning Objectives
 
 * Understand algorithm design techniques.
 * Analyze time and space complexity.
@@ -240,187 +199,144 @@ The aim of these laboratory assignments is to:
 * Apply loop invariants to prove algorithm correctness.
 * Minimize the number of comparisons in algorithms.
 * Understand selection algorithms and order statistics.
-* Find the median without explicitly sorting the input.
-* Find the kth smallest element using partitioning.
-* Understand the working of Quick Sort.
+* Find median without explicitly sorting input.
+* Find kth smallest using partitioning.
+* Understand Quick Sort.
 * Understand heap construction and Heap Sort.
 * Work with randomly generated input stored in files.
+* Analyze operations on 1D arrays and 2D matrices.
+* Implement convolution using FFT.
+* Analyze algorithms involving weighted operation costs.
+* Design sorting algorithms using reversals.
 * Improve problem-solving skills using C programming.
 
 ---
 
-# How to Use
+## How to Use
 
 Clone the repository:
 
 ```bash
 git clone https://github.com/<username>/DAA-Lab.git
+cd DAA-Lab
 ```
 
-Open any lab folder and compile the required C program.
-
-Example:
+Compile and run a program:
 
 ```bash
 gcc "Code solutions/Q1_FunctionGraph.c" -o Q1 -lm
 ./Q1
 ```
 
-For **Lab 2**, navigate to the corresponding question folder and compile the required program using GCC.
-
-Example:
+For Lab 2:
 
 ```bash
 gcc Q2/mergesort_compare.c -o Q2
 ./Q2
 ```
 
-For **Lab 3**, navigate to the corresponding question folder and compile the required C program.
-
-Example:
+For Lab 3:
 
 ```bash
 gcc Q1/binary_ternary_search.c -o Q1
 ./Q1
 ```
 
-For **Lab 4**, navigate to the corresponding question folder and compile the required C program.
-
-Example:
+For Lab 4:
 
 ```bash
 gcc q1/q1.c -o q1
 ./q1
 ```
 
-For **Lab 5**, navigate to the required question folder and compile the corresponding C program.
-
-Example:
+For Lab 5:
 
 ```bash
 gcc q1/q1.c -o q1
 ./q1
 ```
 
-For questions involving file-based sorting, the program generates or reads the required random elements from a file as specified by the implementation.
+For Lab 6:
+
+```bash
+gcc q1/q1.c -o q1 -lm
+./q1
+```
 
 ---
 
-# Laboratory Contents
+## Laboratory Contents
 
-## Lab 1
+### Lab 1
 
-Lab 1 contains:
+1. Growth Rate Analysis
+2. Coin Toss Simulation
+3. Bubble Sort
+4. Tower of Hanoi
+5. Partition Point
+6. Element Uniqueness
 
-* **Q1:** Growth Rate Analysis
-* **Q2:** Coin Toss Simulation
-* **Q3:** Bubble Sort
-* **Q4:** Tower of Hanoi
-* **Q5:** Partition Point
-* **Q6:** Element Uniqueness
+### Lab 2
 
----
+1. Dictionary Operations using different data structures
+2. Comparison of 2-way Merge Sort and Modified 3-way Merge Sort
+3. Comparison of Sequential and Pairwise k-way Merging
 
-## Lab 2
+### Lab 3
 
-Lab 2 contains:
+1. Binary Search vs Ternary Search
+2. Search for Defective Coin using Divide and Conquer
+3. Min/Max using Pairwise Comparison
+4. Strassen Matrix Multiplication
+5. Special-Pattern Matrix Multiplication using Divide and Conquer
+6. Loop Invariants and Selection Sort
 
-* **Q1:** Dictionary Operations using different data structures
-* **Q2:** Comparison of 2-way Merge Sort and modified 3-way Merge Sort
-* **Q3:** Comparison of Sequential and Pairwise k-way Merging
+### Lab 4
 
----
+1. Sorting Elements by Colour
+2. Pair with Given Sum
+3. k Elements with Given Sum
+4. Maximum Simultaneous Party Attendance
+5. Merge Overlapping Intervals
+6. Point with Maximum Interval Overlap
 
-## Lab 3
+### Lab 5
 
-Lab 3 contains:
+1. Median of N Numbers without Sorting
+2. kth Smallest Element without Sorting
+3. Quick Sort for N Random Elements Stored in File
+4. Heap Sort for N Random Elements Stored in File
 
-* **Q1:** Binary Search vs Ternary Search
-* **Q2:** Search the Defective Coin using Divide and Conquer
-* **Q3:** Minimum and Maximum using Pairwise Comparison
-* **Q4:** Matrix Multiplication using Strassen's Method
-* **Q5:** Special-Pattern Matrix Multiplication using Divide and Conquer
-* **Q6:** Loop Invariants and Selection Sort
+### Lab 6
 
-### Lab 3 Complexity Highlights
+#### Set 1
 
-| Question | Algorithm                             | Complexity                  |
-| -------- | ------------------------------------- | --------------------------- |
-| Q1       | Binary Search                         | `O(log₂ n)`                 |
-| Q1       | Ternary Search                        | `O(log₃ n)`                 |
-| Q2       | Defective Coin                        | `O(log n)`                  |
-| Q3       | Pairwise Min-Max                      | `O(n)`                      |
-| Q4       | Strassen's Matrix Multiplication      | `O(n^log₂7)` ≈ `O(n^2.807)` |
-| Q5       | Special-Pattern Matrix Multiplication | `O(n²)`                     |
-| Q6       | Selection Sort                        | `Θ(n²)`                     |
+1. 1D Array Operations
+2. 2D Matrix Operations
+3. Convolution of Two Vectors
+4. Sorting via Reversal
 
----
+#### Set 2
 
-## Lab 4
-
-Lab 4 contains:
-
-* **Q1:** Sorting elements by colour
-* **Q2:** Pair with given sum
-* **Q3:** k elements with given sum
-* **Q4:** Maximum simultaneous party attendance
-* **Q5:** Merge overlapping intervals
-* **Q6:** Point with maximum interval overlap
-
-### Lab 4 Complexity Highlights
-
-| Question | Algorithm                           | Complexity         |
-| -------- | ----------------------------------- | ------------------ |
-| Q1       | Sorting elements by colour          | `O(n)`             |
-| Q2       | Sorting + Binary Search             | `O(n log n)`       |
-| Q3       | Recursive selection + Binary Search | `O(n^(k-1) log n)` |
-| Q4       | Event Sorting + Sweep Line          | `O(n log n)`       |
-| Q5       | Sorting + Interval Merging          | `O(n log n)`       |
-| Q6       | Event Sorting + Sweep Line          | `O(n log n)`       |
+1. 1D Array Operations
+2. 2D Matrix Operations
+3. Convolution of Two Vectors
+4. Sorting via Reversal
 
 ---
 
-## Lab 5
+## Complexity Highlights
 
-Lab 5 focuses on **selection algorithms and comparison-based sorting algorithms**.
+| Lab       | Major Complexity                                                                                    |
+| --------- | --------------------------------------------------------------------------------------------------- |
+| **Lab 1** | Various basic and recursive algorithms                                                              |
+| **Lab 2** | Merge-based algorithms and k-way merging                                                            |
+| **Lab 3** | Divide and Conquer, Strassen, Selection Sort                                                        |
+| **Lab 4** | O(n), O(n log n), O(n^(k−1) log n)                                                                  |
+| **Lab 5** | Quickselect, Quick Sort, Heap Sort                                                                  |
+| **Lab 6** | Array/Matrix operations, O(n log n) FFT convolution, O(n) reversal count, O(n log² n) reversal cost |
 
-The laboratory contains the following problems:
-
-* **Q1:** Find the median of a list of `N` numbers without sorting the list.
-* **Q2:** Find the kth smallest element in a list of `N` numbers without sorting the list.
-* **Q3:** Implement Quick Sort for `N` randomly generated elements stored in a file.
-* **Q4:** Implement Heap Sort for `N` randomly generated elements stored in a file.
-
-### Lab 5 Complexity Highlights
-
-| Question | Algorithm                      | Complexity                               |
-| -------- | ------------------------------ | ---------------------------------------- |
-| Q1       | Median using Quickselect       | `O(n)` average, `O(n²)` worst case       |
-| Q2       | kth Smallest using Quickselect | `O(n)` average, `O(n²)` worst case       |
-| Q3       | Quick Sort                     | `O(n log n)` average, `O(n²)` worst case |
-| Q4       | Heap Sort                      | `O(n log n)`                             |
-
-### Lab 5 Key Concepts
-
-**Quickselect** is a selection algorithm based on the partitioning technique used in Quick Sort. Instead of recursively processing both partitions, it continues only in the partition containing the desired element. This allows the median or kth smallest element to be found without completely sorting the list.
-
-**Quick Sort** recursively partitions the array around a pivot and sorts the resulting subarrays. Its average-case complexity is `O(n log n)`, while an unfavorable sequence of pivots can result in `O(n²)` time.
-
-**Heap Sort** first constructs a max heap and repeatedly extracts the maximum element to produce the sorted array. It provides a guaranteed `O(n log n)` time complexity.
-
----
-
-# Complexity Summary
-
-| Lab   | Main Techniques                                      | Complexity Highlights            |
-| ----- | ---------------------------------------------------- | -------------------------------- |
-| Lab 1 | Basic algorithms, sorting, recursion                 | Varies by problem                |
-| Lab 2 | Dictionaries, Merge Sort, k-way Merging              | `O(n)`, `O(n log n)` and related |
-| Lab 3 | Searching, Divide and Conquer, Matrix Multiplication | `O(log n)` to `O(n².807)`        |
-| Lab 4 | Sorting Applications, Sweep Line                     | `O(n)` to `O(n log n)`           |
-| Lab 5 | Quickselect, Quick Sort, Heap Sort                   | `O(n)` average to `O(n log n)`   |
-
----
+---  
 
 # Future Additions
 

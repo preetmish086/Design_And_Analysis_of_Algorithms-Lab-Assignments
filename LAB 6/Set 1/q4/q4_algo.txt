@@ -1,0 +1,38 @@
+ALGORITHM-
+1. Read N and the dimension array arr.
+2. Create a DP table dp[N][N].
+3. Set dp[i][i] = 0 because multiplying a single matrix requires no multiplication.
+4. Consider chain lengths from 2 to N-1.
+5. For every chain, try every possible split position k.
+6. Calculate the multiplication cost for each split.
+7. Store the minimum cost in dp[i][j].
+8. Print dp[1][N-1].
+
+
+PSEUDOCODE-
+MATRIX_CHAIN(arr, N)
+
+1. Create dp[1...N-1][1...N-1]
+
+2. For i ← 1 to N-1
+       dp[i][i] ← 0
+
+3. For length ← 2 to N-1
+       For i ← 1 to N-length
+           j ← i + length - 1
+
+           dp[i][j] ← ∞
+
+           For k ← i to j-1
+               cost ← dp[i][k]
+                     + dp[k+1][j]
+                     + arr[i-1] × arr[k] × arr[j]
+
+               dp[i][j] ← min(dp[i][j], cost)
+
+4. Return dp[1][N-1]
+
+
+COMPLEXITY ANALYSIS-
+Time Complexity: O(N^3)
+Space Complexity: O(N^2)

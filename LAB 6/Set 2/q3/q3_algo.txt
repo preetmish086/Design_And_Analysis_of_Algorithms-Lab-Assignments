@@ -1,0 +1,120 @@
+Given:
+
+C[k] = Σ A[j]B[k − j], for j = 0 to m − 1
+
+A direct implementation requires O(mn) time.
+
+To achieve O(n log n), we use the Fast Fourier Transform (FFT).
+
+1. Algorithm — FFT-Based Convolution
+
+ALGORITHM-
+Let N be the smallest power of 2 such that:
+
+N ≥ m + n − 1
+
+Create arrays FA and FB of size N.
+
+Copy A and B into them and pad the remaining positions with zero.
+
+Compute:
+
+FFT(FA), FFT(FB)
+
+Multiply corresponding frequency-domain values:
+
+FC[i] = FA[i] × FB[i]
+
+Compute the inverse FFT of FC.
+
+The first m + n − 1 values form the convolution vector C.
+
+
+PSEUDOCODE-
+
+FFT
+FFT(A, n, inverse)
+
+1. If n = 1
+   Return
+
+2. Split A into:
+
+   * Even elements
+   * Odd elements
+
+3. FFT(Even, n/2, inverse)
+
+4. FFT(Odd, n/2, inverse)
+
+5. For k ← 0 to n/2 − 1:
+
+   w ← exp(2πik/n)
+
+   If inverse:
+
+   w ← exp(−2πik/n)
+
+   T ← w × Odd[k]
+
+   A[k] ← Even[k] + T
+
+   A[k + n/2] ← Even[k] − T
+
+6. If inverse:
+
+   Divide every element by n
+
+Convolution
+CONVOLUTION(A, B, m, n)
+
+1. N ← smallest power of 2 ≥ m + n − 1
+
+2. Initialize FA and FB with zeros
+
+3. Copy A into FA
+
+4. Copy B into FB
+
+5. FFT(FA, N, false)
+
+6. FFT(FB, N, false)
+
+7. For i ← 0 to N − 1:
+
+   FC[i] ← FA[i] × FB[i]
+
+8. FFT(FC, N, true)
+
+9. For k ← 0 to m + n − 2:
+
+   C[k] ← FC[k]
+
+10. Return C
+
+
+COMPLEXITY ANALYSIS-
+Let:
+N = O(n)
+because n ≥ m.
+
+Each FFT requires:
+
+O(N log N)
+
+We perform:
+
+* FFT of A: O(N log N)
+* FFT of B: O(N log N)
+* N pointwise multiplications: O(N)
+* Inverse FFT: O(N log N)
+
+Therefore:
+
+T(n) = O(n log n)
+
+SPACE COMPLEXITY-
+
+The FFT arrays require:
+
+O(n) space.
