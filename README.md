@@ -76,6 +76,16 @@ DAA-Lab/
 │   │
 │   └── README.md
 │
+├── Lab 7/
+│   ├── q1/
+│   ├── q2/
+│   ├── q3/
+│   ├── q4/
+│   ├── q5/
+│   ├── q6/
+│   ├── q7/
+│   └── README.md
+│
 ├── .gitignore
 └── README.md
 ```
@@ -92,6 +102,7 @@ DAA-Lab/
 | **Lab 4** | Applications of Sorting                                                                                                                                      | ✅      |
 | **Lab 5** | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                           | ✅      |
 | **Lab 6** | 1D Array Operations, 2D Matrix Operations, FFT-Based Convolution, Sorting via Reversal                                                                       | ✅      |
+| **Lab 7** | 1Algorithmic Puzzle Problems, Recurrence Relations, Dynamic Programming, Greedy/Invariant-Based Strategies, Matrix Chain Multiplication                                                                       | ✅      |
 
 ---
 
@@ -154,6 +165,17 @@ DAA-Lab/
 * Weighted Reversal Cost
 * Reversal-Based Sorting
 * Stable Partitioning
+* Recurrence Relations
+* Dynamic Programming
+* Optimal Substructure
+* Overlapping Subproblems
+* Minimax Strategy
+* Invariant-Based Problem Solving
+* Parity-Based Strategy
+* Recursive Problem Decomposition
+* Split-Point Dynamic Programming
+* Matrix Chain Multiplication
+* Optimal Parenthesization
 
 ---
 
@@ -183,6 +205,8 @@ Lab 4 contains C implementations and algorithm/complexity analysis for sorting-b
 Lab 5 contains C implementations and algorithm analysis for Quickselect, Quick Sort, and Heap Sort.
 
 Lab 6 contains C implementations and corresponding algorithm/complexity analysis for array operations, matrix operations, FFT-based convolution, and reversal-based sorting.
+
+Lab 7 contains C implementations of algorithmic puzzle problems along with their algorithms, pseudocode, recurrence relations, correctness reasoning, and complexity analysis.
 
 ---
 
@@ -263,6 +287,14 @@ gcc q1/q1.c -o q1 -lm
 ./q1
 ```
 
+For Lab 7:
+
+```bash
+cd "Lab 7/q1"
+gcc q1.c -o q1
+./q1
+```
+
 ---
 
 ## Laboratory Contents
@@ -321,7 +353,17 @@ gcc q1/q1.c -o q1 -lm
 1. 1D Array Operations
 2. 2D Matrix Operations
 3. Convolution of Two Vectors
-4. Sorting via Reversal
+4. Sorting via Reversal  
+
+### Lab 7
+
+1. Invert the coin triangle  
+2. Super Egg Testing  
+3. Reve's Puzzle  
+4. Security Switches  
+5. Hitting a Moving Target  
+6. The Best Time to Be Alive  
+7. Matrix Chain Multiplication (MCM)
 
 ---
 
@@ -334,7 +376,9 @@ gcc q1/q1.c -o q1 -lm
 | **Lab 3** | Divide and Conquer, Strassen, Selection Sort                                                        |
 | **Lab 4** | O(n), O(n log n), O(n^(k−1) log n)                                                                  |
 | **Lab 5** | Quickselect, Quick Sort, Heap Sort                                                                  |
-| **Lab 6** | Array/Matrix operations, O(n log n) FFT convolution, O(n) reversal count, O(n log² n) reversal cost |
+| **Lab 6** | Array/Matrix operations, O(n log n) FFT convolution, O(n) reversal count, O(n log² n) reversal cost |  
+Lab 7
+Recurrence Relations, Dynamic Programming, O(n), O(n log n), O(n²), and O(n³) algorithms
 
 ---  
 
