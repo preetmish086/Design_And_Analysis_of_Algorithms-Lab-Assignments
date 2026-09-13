@@ -1,0 +1,72 @@
+Algorithm: Reve's Puzzle
+
+Input: n disks
+
+Output: Minimum number of moves
+
+1. Set R[0] = 0
+2. Set R[1] = 1
+
+3. For i = 2 to n:
+       R[i] = ∞
+
+       For k = 1 to i-1:
+           moves = 2 × R[k] + (2^(i-k) - 1)
+
+           If moves < R[i]:
+               R[i] = moves
+               split[i] = k
+
+4. Return R[n]
+
+The split[] array isn't strictly necessary if we only want the number of moves, but it's useful if we want to actually generate the solution.
+
+4. Pseudocode
+Algorithm Reve(n)
+
+    R[0] ← 0
+    R[1] ← 1
+
+    for i ← 2 to n do
+
+        R[i] ← ∞
+
+        for k ← 1 to i-1 do
+
+            moves ← 2 × R[k] + 2^(i-k) - 1
+
+            if moves < R[i] then
+                R[i] ← moves
+                split[i] ← k
+            end if
+
+        end for
+
+    end for
+
+    return R[n]
+
+End Algorithm
+
+
+COMPLEXITY-
+There are n DP states:
+
+$$ R(1),R(2),...,R(n) $$
+
+For every i, we try up to i-1 possible values of k.
+
+Therefore:
+
+$$ 1+2+3+\cdots+(n-1)=O(n^2) $$
+
+So the DP computation takes:
+
+O(n^2)
+
+Space:
+
+O(n)
+
+for the R[] and split[] arrays.
+Move-generation complexity: proportional to the number of moves produced.

@@ -1,0 +1,68 @@
+*Invert the coin triangle*
+
+ALGORITHM-
+
+First we need to find out the minimum number of coins that need to be repositioned/shifted to invert the triangle. In other words we need to maximize the number of coins that remain fixed.
+Total number of coins in a triangle of height 
+n = 1+2+3+4...+n = n(n+1)/2
+
+Taking small cases to find the max number of coins that can remain untouched.
+
+Height of the triangle = n
+Number of coins = N = n(n+1)/2
+No. of coins to be moved = c
+
+CASE 1-
+n=2
+N=3
+c=1
+
+CASE 2-
+n=3
+N=6
+c=2
+
+CASE 3-
+n=4
+N=10
+c=3
+
+CASE 4-
+n=5
+N=15
+c=5
+
+Thus, from the above small cases, we observe, the minimum number of coins that need to shifted in order to invert a triangle with N coins is approximately
+c = N//3 = floor(N/3)
+now, since N=n(n+1)/2, we obtain
+c = floor[n(n+1)/6]
+
+
+APPROACH:
+To invert the triangle with minimum moves, we maximize the number of coins that remain in their original positions. For a triangle of height n, the total number of coins is N = n(n+1)/2. By examining small cases and the possible overlap between the original and inverted configurations, the minimum number of coins that need to be shifted is floor(N/3). Therefore, the compact formula is floor(n(n+1)/6).
+
+
+PSEUDOCODE-
+
+Input: n (the height of the triangle)
+Output: c (minimum number of moves required to invert the triangle)
+
+READ n
+N = n(n+1)/2
+c = N/3
+PRINT c
+
+Algorithm InvertCoinTriangle(n)
+
+    N ← n × (n + 1) / 2
+
+    moves ← N / 3
+
+    return moves
+
+End Algorithm
+
+
+COMPLEXITY ANALYSIS-
+T(n) = O(1)
+S(n) = O(1)

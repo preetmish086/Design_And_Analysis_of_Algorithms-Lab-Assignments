@@ -1,0 +1,70 @@
+ALGORITHM-
+Create a table:
+DP[e][f]
+
+where:
+DP[e][f] = minimum number of drops required in the worst case using e eggs and f floors.
+
+For every combination of e and f, try every possible first floor k.
+
+for e = 2 ... E
+    for f = 2 ... F
+        DP[e][f] = infinity
+
+        for k = 1 ... f
+            breaks    = DP[e-1][k-1]
+            survives  = DP[e][f-k]
+
+            worst = 1 + max(breaks, survives)
+
+            DP[e][f] = min(DP[e][f], worst)
+
+
+PSEUDOCODE-
+Algorithm EggDrop(E, F)
+
+    for e = 0 to E
+        DP[e][0] ← 0
+
+    for f = 1 to F
+        DP[1][f] ← f
+
+    for e = 2 to E
+        for f = 1 to F
+
+            DP[e][f] ← ∞
+
+            for k = 1 to f
+
+                breaks ← DP[e-1][k-1]
+                survives ← DP[e][f-k]
+
+                worst ← 1 + max(breaks, survives)
+
+                DP[e][f] ← min(DP[e][f], worst)
+
+    return DP[E][F]
+
+
+COMPLEXITY-
+There are:
+
+E choices of eggs
+F choices of floors
+F possible dropping floors for each state
+
+Therefore:
+O(EF^2)
+
+Space:
+O(EF)
+
+
+note for self-
+max(breaks, survives)
+
+because we're interested in the worst case, and:
+
+min(...)
+
+because we choose the floor that gives the best worst-case result.

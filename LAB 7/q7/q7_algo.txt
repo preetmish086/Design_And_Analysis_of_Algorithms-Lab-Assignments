@@ -1,0 +1,96 @@
+Basic idea
+
+We don't actually multiply the matrices.
+
+We only need to find the best order of multiplication so that the number of scalar multiplications is minimum.
+
+Suppose we have:
+
+A1 A2 A3 A4
+
+We try different places to split the chain:
+
+A1 | A2 A3 A4
+A1 A2 | A3 A4
+A1 A2 A3 | A4
+
+For every possible split, we calculate the cost and choose the minimum.
+
+We store the minimum cost in m[i][j].
+
+We also store the position of the best split in s[i][j] so that we can print the final ordering.
+
+Algorithm
+Read the dimensions of all matrices.
+Set the cost of multiplying one matrix to 0.
+Consider chains of length 2, then 3, then 4, and so on.
+For each chain, try every possible split.
+Calculate the multiplication cost for each split.
+Store the minimum cost.
+Store the split position that gave the minimum.
+Finally, use the split table to print the optimal parenthesization.
+Recurrence
+
+For matrices Ai to Aj:
+
+$$ m[i][j] = \min_{i\leq k<j} \left( m[i][k]+m[k+1][j]+p[i-1]p[k]p[j] \right) $$
+Pseudocode
+Algorithm MatrixChain(p, n)
+
+    for i ← 1 to n do
+        m[i][i] ← 0
+    end for
+
+    for length ← 2 to n do
+
+        for i ← 1 to n-length+1 do
+
+            j ← i + length - 1
+            m[i][j] ← infinity
+
+            for k ← i to j-1 do
+
+                cost ← m[i][k]
+                        + m[k+1][j]
+                        + p[i-1] × p[k] × p[j]
+
+                if cost < m[i][j] then
+                    m[i][j] ← cost
+                    s[i][j] ← k
+                end if
+
+            end for
+
+        end for
+
+    end for
+
+    return m[1][n]
+
+End Algorithm
+
+To print the ordering:
+
+PrintOrder(i, j)
+
+    if i = j then
+        print Ai
+        return
+    end if
+
+    k ← s[i][j]
+
+    print "("
+    PrintOrder(i, k)
+    PrintOrder(k+1, j)
+    print ")"
+
+End
+Complexity
+
+There are O(n²) entries in the DP table, and for each entry we try up to n split positions.
+
+Therefore:
+
+Time: O(n³)
+Space: O(n²)

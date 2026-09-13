@@ -1,0 +1,35 @@
+Algorithm
+
+M[1] = 1
+M[2] = 2
+
+for i = 3 to n
+    if i is odd
+        M[i] = 2 * M[i-1] + 1
+    else
+        M[i] = 2 * M[i-1]
+
+
+Pseudocode
+Algorithm SecuritySwitches(n)
+
+    if n = 1
+        return 1
+
+    M ← 2
+
+    for i ← 3 to n do
+        M ← 2 × M + (i mod 2)
+    end for
+
+    return M
+
+End Algorithm
+
+
+Complexity
+
+Because we're only keeping the previous value:
+
+Time: O(n)
+Space: O(1)

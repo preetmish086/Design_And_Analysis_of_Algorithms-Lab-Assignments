@@ -1,0 +1,72 @@
+Basic idea
+
+For every scientist, there are two events:
+
+Birth → number of living scientists increases by 1.
+Death → number of living scientists decreases by 1.
+
+We put all these events together, sort them by year, and go through them one by one.
+
+If a birth and death happen in the same year, death is processed first, as given in the question.
+
+While going through the events, we keep track of the maximum number of scientists alive.
+
+Algorithm
+Create two events for every scientist: birth and death.
+Sort all events according to year.
+If two events have the same year, put death before birth.
+Start with alive = 0.
+For each event:
+If it is a birth, increase alive.
+If it is a death, decrease alive.
+Whenever alive becomes greater than the previous maximum, store that year.
+Return the stored year and maximum number of scientists.
+Pseudocode
+Algorithm BestTime(scientists)
+
+    Create an array of events
+
+    for each scientist do
+        add birth event with +1
+        add death event with -1
+    end for
+
+    Sort events by year
+    If years are same, put death before birth
+
+    alive ← 0
+    maximum ← 0
+    bestYear ← 0
+
+    for each event do
+
+        if event is birth then
+            alive ← alive + 1
+        else
+            alive ← alive - 1
+        end if
+
+        if alive > maximum then
+            maximum ← alive
+            bestYear ← event.year
+        end if
+
+    end for
+
+    return bestYear, maximum
+
+End Algorithm
+Complexity
+
+There are 2n events for n scientists.
+
+Sorting takes O(n log n).
+Going through all events takes O(n).
+
+Therefore:
+
+Time: O(n log n)
+Space: O(n)
+Easy way to remember
+
+Birth = +1, Death = -1 → sort → count → maximum.
