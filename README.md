@@ -153,15 +153,25 @@ DAA-Lab/
 │   └── README.md
 
 ├── Lab 8/
+
 │   ├── q1/
+
 │   ├── q2/
+
 │   ├── q3/
+
 │   ├── q4/
+
 │   ├── q5/
+
 │   ├── q6/
+
 │   ├── q7/
+
 │   ├── q8/
+
 │   ├── q9/
+
 │   └── README.md
 
 │
@@ -174,29 +184,21 @@ DAA-Lab/
 
 ---
 
-## Laboratory Assignments**
+## Laboratory Assignments
 
-| Lab       | Topics                                                                                                                                                       | Status |
-
+| Lab       | Topics                                                                                                                                                       | Status |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-
-| ****Lab 1**** | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness                                                      | ✅      |
-
-| ****Lab 2**** | Dictionary Operations, Merge Sort Comparison, k-way Merging                                                                                                  | ✅      |
-
-| ****Lab 3**** | Binary vs Ternary Search, Defective Coin, Min-Max, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort | ✅      |
-
-| ****Lab 4**** | Applications of Sorting                                                                                                                                      | ✅      |
-
-| ****Lab 5**** | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                           | ✅      |
-
-| ****Lab 6**** | 1D Array Operations, 2D Matrix Operations, FFT-Based Convolution, Sorting via Reversal                                                                       | ✅      |
-
-| ****Lab 7**** | 1Algorithmic Puzzle Problems, Recurrence Relations, Dynamic Programming, Greedy/Invariant-Based Strategies, Matrix Chain Multiplication                                                                       | ✅      |
-
-| **Lab 8** | Dynamic Programming: Coin Change, LCS, LIS, Edit Distance, Rod Cutting, Optimal Binary Search Trees, Collatz Conjecture                                             | ✅      |
+| **Lab 1** | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness                                                      | ✅      |
+| **Lab 2** | Dictionary Operations, Merge Sort Comparison, k-way Merging                                                                                                  | ✅      |
+| **Lab 3** | Binary vs Ternary Search, Defective Coin, Min-Max, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort | ✅      |
+| **Lab 4** | Applications of Sorting                                                                                                                                      | ✅      |
+| **Lab 5** | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                           | ✅      |
+| **Lab 6** | 1D Array Operations, 2D Matrix Operations, FFT-Based Convolution, Sorting via Reversal                                                                       | ✅      |
+| **Lab 7** | Algorithmic Puzzle Problems, Recurrence Relations, Dynamic Programming, Greedy/Invariant-Based Strategies, Matrix Chain Multiplication                       | ✅      |
+| **Lab 8** | Dynamic Programming: Coin Change, LCS, LIS, Edit Distance, Rod Cutting, Optimal Binary Search Trees, Collatz Conjecture                                      | ✅      |
 
 ---
+
 
 ## Algorithms Covered**
 
@@ -672,28 +674,17 @@ gcc q2.c -o q2
 
 ---
 
-## Complexity Highlights**
+## Complexity Highlights
 
-| Lab       | Major Complexity                                                                                    |
-
-| --------- | --------------------------------------------------------------------------------------------------- |
-
-| ****Lab 1**** | Various basic and recursive algorithms                                                              |
-
-| ****Lab 2**** | Merge-based algorithms and k-way merging                                                            |
-
-| ****Lab 3**** | Divide and Conquer, Strassen, Selection Sort                                                        |
-
-| ****Lab 4**** | O(n), O(n log n), O(n^(k−1) log n)                                                                  |
-
-| ****Lab 5**** | Quickselect, Quick Sort, Heap Sort                                                                  |
-
-| ****Lab 6**** | Array/Matrix operations, O(n log n) FFT convolution, O(n) reversal count, O(n log² n) reversal cost |
-
-Lab 7
-
-Recurrence Relations, Dynamic Programming, O(n), O(n log n), O(n²), and O(n³) algorithms
-
+| Lab       | Major Complexity                                                                                              |
+| --------- | ------------------------------------------------------------------------------------------------------------- |
+| **Lab 1** | Various basic and recursive algorithms                                                                        |
+| **Lab 2** | Merge-based algorithms and k-way merging                                                                      |
+| **Lab 3** | Divide and Conquer, Strassen, Selection Sort                                                                  |
+| **Lab 4** | O(n), O(n log n), O(n^(k−1) log n)                                                                            |
+| **Lab 5** | Quickselect, Quick Sort, Heap Sort                                                                            |
+| **Lab 6** | Array/Matrix operations, O(n log n) FFT convolution, O(n) reversal count, O(n log² n) reversal cost           |
+| **Lab 7** | Recurrence Relations, Dynamic Programming, O(n), O(n log n), O(n²), and O(n³) algorithms                      |
 | **Lab 8** | Dynamic Programming: O(nV), O(mn), O(n²), O(n³); Collatz trajectory simulation with data-dependent complexity |
 
 ---
