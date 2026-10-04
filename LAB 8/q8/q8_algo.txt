@@ -1,0 +1,37 @@
+Q8. Optimal Binary Search Tree — OBST
+
+PSEUDOCODE-
+OBST(p, q, n)
+
+    for i ← 1 to n+1
+
+        e[i][i-1] ← q[i-1]
+        w[i][i-1] ← q[i-1]
+
+    for length ← 1 to n
+
+        for i ← 1 to n-length+1
+
+            j ← i + length - 1
+
+            e[i][j] ← INF
+
+            w[i][j] ← w[i][j-1]
+                       + p[j]
+                       + q[j]
+
+            for r ← i to j
+
+                cost ← e[i][r-1]
+                        + e[r+1][j]
+                        + w[i][j]
+
+                if cost < e[i][j]
+                    e[i][j] ← cost
+
+    return e[1][n]
+
+
+COMPLEXITY-
+Time  = O(n³)
+Space = O(n²)

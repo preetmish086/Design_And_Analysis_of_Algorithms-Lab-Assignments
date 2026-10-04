@@ -1,4 +1,4 @@
-# Design and Analysis of Algorithms (DAA) Laboratory
+# Design and Analysis of Algorithms (DAA) Laboratory**
 
 ![Language](https://img.shields.io/badge/Language-C-blue.svg)
 
@@ -8,75 +8,151 @@
 
 ![Institute](https://img.shields.io/badge/Institute-IIIT%20Bhubaneswar-orange.svg)
 
-This repository contains all programming assignments for the **Design and Analysis of Algorithms (DAA) Laboratory**. The assignments focus on implementing algorithms, analyzing their complexity, and validating their performance through practical experimentation.
+This repository contains all programming assignments for the ****Design and Analysis of Algorithms (DAA) Laboratory****. The assignments focus on implementing algorithms, analyzing their complexity, and validating their performance through practical experimentation.
 
-## Student Information
+## Student Information**
 
-* **Name:** Preetika Mishra
-* **Branch:** CSE-B (1)
-* **Semester:** 3rd Semester
-* **Institute:** IIIT Bhubaneswar
+* ****Name:**** Preetika Mishra
+
+* ****Branch:**** CSE-B (1)
+
+* ****Semester:**** 3rd Semester
+
+* ****Institute:**** IIIT Bhubaneswar
 
 ---
 
-## Repository Structure
+## Repository Structure**
 
 ```text
+
 DAA-Lab/
+
 │
+
 ├── Lab 1/
-│   ├── Code solutions/
-│   ├── csv files/
-│   ├── graphs/
-│   └── README.md
+
+│   ├── Code solutions/
+
+│   ├── csv files/
+
+│   ├── graphs/
+
+│   └── README.md
+
 │
+
 ├── Lab 2/
-│   ├── Q1/
-│   ├── Q2/
-│   ├── Q3/
-│   └── README.md
+
+│   ├── Q1/
+
+│   ├── Q2/
+
+│   ├── Q3/
+
+│   └── README.md
+
 │
+
 ├── Lab 3/
-│   ├── q1/
-│   ├── q2/
-│   ├── q3/
-│   ├── q4/
-│   ├── q5/
-│   ├── q6/
-│   └── README.md
+
+│   ├── q1/
+
+│   ├── q2/
+
+│   ├── q3/
+
+│   ├── q4/
+
+│   ├── q5/
+
+│   ├── q6/
+
+│   └── README.md
+
 │
+
 ├── Lab 4/
-│   ├── q1/
-│   ├── q2/
-│   ├── q3/
-│   ├── q4/
-│   ├── q5/
-│   ├── q6/
-│   └── README.md
+
+│   ├── q1/
+
+│   ├── q2/
+
+│   ├── q3/
+
+│   ├── q4/
+
+│   ├── q5/
+
+│   ├── q6/
+
+│   └── README.md
+
 │
+
 ├── Lab 5/
-│   ├── q1/
-│   ├── q2/
-│   ├── q3/
-│   ├── q4/
-│   └── README.md
+
+│   ├── q1/
+
+│   ├── q2/
+
+│   ├── q3/
+
+│   ├── q4/
+
+│   └── README.md
+
 │
+
 ├── Lab 6/
-│   ├── Set 1/
-│   │   ├── q1/
-│   │   ├── q2/
-│   │   ├── q3/
-│   │   └── q4/
-│   │
-│   ├── Set 2/
-│   │   ├── q1/
-│   │   ├── q2/
-│   │   ├── q3/
-│   │   └── q4/
-│   │
-│   └── README.md
+
+│   ├── Set 1/
+
+│   │   ├── q1/
+
+│   │   ├── q2/
+
+│   │   ├── q3/
+
+│   │   └── q4/
+
+│   │
+
+│   ├── Set 2/
+
+│   │   ├── q1/
+
+│   │   ├── q2/
+
+│   │   ├── q3/
+
+│   │   └── q4/
+
+│   │
+
+│   └── README.md
+
 │
+
 ├── Lab 7/
+
+│   ├── q1/
+
+│   ├── q2/
+
+│   ├── q3/
+
+│   ├── q4/
+
+│   ├── q5/
+
+│   ├── q6/
+
+│   ├── q7/
+
+│   └── README.md
+
+├── Lab 8/
 │   ├── q1/
 │   ├── q2/
 │   ├── q3/
@@ -84,210 +160,337 @@ DAA-Lab/
 │   ├── q5/
 │   ├── q6/
 │   ├── q7/
+│   ├── q8/
+│   ├── q9/
 │   └── README.md
+
 │
+
 ├── .gitignore
+
 └── README.md
+
 ```
 
 ---
 
-## Laboratory Assignments
+## Laboratory Assignments**
 
-| Lab       | Topics                                                                                                                                                       | Status |
+| Lab       | Topics                                                                                                                                                       | Status |
+
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-| **Lab 1** | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness                                                      | ✅      |
-| **Lab 2** | Dictionary Operations, Merge Sort Comparison, k-way Merging                                                                                                  | ✅      |
-| **Lab 3** | Binary vs Ternary Search, Defective Coin, Min-Max, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort | ✅      |
-| **Lab 4** | Applications of Sorting                                                                                                                                      | ✅      |
-| **Lab 5** | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                           | ✅      |
-| **Lab 6** | 1D Array Operations, 2D Matrix Operations, FFT-Based Convolution, Sorting via Reversal                                                                       | ✅      |
-| **Lab 7** | 1Algorithmic Puzzle Problems, Recurrence Relations, Dynamic Programming, Greedy/Invariant-Based Strategies, Matrix Chain Multiplication                                                                       | ✅      |
+
+| ****Lab 1**** | Growth Analysis, Coin Toss Simulation, Bubble Sort, Tower of Hanoi, Partition Point, Element Uniqueness                                                      | ✅      |
+
+| ****Lab 2**** | Dictionary Operations, Merge Sort Comparison, k-way Merging                                                                                                  | ✅      |
+
+| ****Lab 3**** | Binary vs Ternary Search, Defective Coin, Min-Max, Strassen Matrix Multiplication, Special-Pattern Matrix Multiplication, Loop Invariants and Selection Sort | ✅      |
+
+| ****Lab 4**** | Applications of Sorting                                                                                                                                      | ✅      |
+
+| ****Lab 5**** | Selection using Quickselect, Quick Sort, Heap Sort                                                                                                           | ✅      |
+
+| ****Lab 6**** | 1D Array Operations, 2D Matrix Operations, FFT-Based Convolution, Sorting via Reversal                                                                       | ✅      |
+
+| ****Lab 7**** | 1Algorithmic Puzzle Problems, Recurrence Relations, Dynamic Programming, Greedy/Invariant-Based Strategies, Matrix Chain Multiplication                                                                       | ✅      |
+
+| **Lab 8** | Dynamic Programming: Coin Change, LCS, LIS, Edit Distance, Rod Cutting, Optimal Binary Search Trees, Collatz Conjecture                                             | ✅      |
 
 ---
 
-## Algorithms Covered
+## Algorithms Covered**
 
 * Asymptotic Growth Analysis
+
 * Experimental Algorithm Analysis
+
 * Sorting Algorithms
+
 * Bubble Sort
+
 * Selection Sort
+
 * Merge Sort
+
 * Modified 3-way Merge Sort
+
 * Quick Sort
+
 * Heap Sort
+
 * Quickselect
+
 * Dictionary Operations
+
 * Arrays and Linked Lists
+
 * Binary Search
+
 * Ternary Search
+
 * Divide and Conquer
+
 * Recursive Algorithms
+
 * Strassen's Matrix Multiplication
+
 * Special-Pattern Matrix Multiplication
+
 * Minimum and Maximum using Pairwise Comparison
+
 * Defective Coin Problem
+
 * Loop Invariants
+
 * Sequential Merging
+
 * Pairwise Merging
+
 * k-way Merging
+
 * Randomized Algorithms
+
 * Selection Algorithms
+
 * Order Statistics
+
 * Median Finding
+
 * kth Smallest Element
+
 * Partitioning
+
 * Heap Construction
+
 * Time Complexity Analysis
+
 * Space Complexity Analysis
+
 * Sorting-based Problem Solving
+
 * Counting/Bucket-Based Sorting
+
 * Combination Generation
+
 * Recursive Search
+
 * Event-Based Sorting
+
 * Sweep-Line Technique
+
 * Interval Merging
+
 * Interval Overlap Analysis
+
 * Event Ordering
+
 * Maintaining Active Intervals
+
 * 1D Array Operations
+
 * 2D Matrix Operations
+
 * Matrix Addition
+
 * Matrix Multiplication
+
 * Matrix Transposition
+
 * Matrix Determinant
+
 * Symmetric Matrix Checking
+
 * Eigenvalue and Eigenvector Computation
+
 * Convolution
+
 * Fast Fourier Transform (FFT)
+
 * FFT-Based Divide and Conquer
+
 * Weighted Reversal Cost
+
 * Reversal-Based Sorting
+
 * Stable Partitioning
+
 * Recurrence Relations
+
 * Dynamic Programming
+
 * Optimal Substructure
+
 * Overlapping Subproblems
+
 * Minimax Strategy
+
 * Invariant-Based Problem Solving
+
 * Parity-Based Strategy
+
 * Recursive Problem Decomposition
+
 * Split-Point Dynamic Programming
+
 * Matrix Chain Multiplication
+
 * Optimal Parenthesization
 
----
+* Dynamic Programming
 
-## Programming Language
+* Minimum Coin Change
 
-* **Language:** C
-* **Compiler:** GCC
+* Coin Change – Counting Combinations
 
----
+* Longest Common Subsequence (LCS)
 
-## Folder Organization
+* Longest Increasing Subsequence (LIS)
 
-Each lab contains:
+* Maximum Sum Increasing Subsequence (MSIS)
 
-* C source code (`.c`)
-* Algorithm and complexity analysis
-* CSV files where applicable
-* Graph generation programs and graphs where applicable
-* Individual README files
+* Edit Distance (Levenshtein Distance)
 
-Lab 2 includes experimental data that can be imported into Microsoft Excel for performance graphs.
+* Rod Cutting with Reconstruction
 
-Lab 3 contains C implementations and documentation for algorithm explanation, correctness analysis, comparison counting, recurrence analysis, and complexity analysis.
+* Optimal Binary Search Trees (OBST)
 
-Lab 4 contains C implementations and algorithm/complexity analysis for sorting-based applications.
+* Dynamic Programming Traceback and Reconstruction
 
-Lab 5 contains C implementations and algorithm analysis for Quickselect, Quick Sort, and Heap Sort.
+* Collatz Conjecture Simulation
 
-Lab 6 contains C implementations and corresponding algorithm/complexity analysis for array operations, matrix operations, FFT-based convolution, and reversal-based sorting.
+* Integer Overflow Handling
 
-Lab 7 contains C implementations of algorithmic puzzle problems along with their algorithms, pseudocode, recurrence relations, correctness reasoning, and complexity analysis.
+* Dynamic Memory Allocation
 
 ---
 
-## Learning Objectives
+## Programming Language**
+
+* ****Language:**** C
+
+* ****Compiler:**** GCC
+
+---
+
+## Learning Objectives**
 
 * Understand algorithm design techniques.
+
 * Analyze time and space complexity.
+
 * Compare algorithms experimentally.
+
 * Study asymptotic growth of functions.
+
 * Visualize algorithm performance using graphs.
+
 * Compare different data structures and algorithmic approaches.
+
 * Understand and implement divide-and-conquer algorithms.
+
 * Analyze recursive algorithms using recurrence relations.
+
 * Apply loop invariants to prove algorithm correctness.
+
 * Minimize the number of comparisons in algorithms.
+
 * Understand selection algorithms and order statistics.
+
 * Find median without explicitly sorting input.
+
 * Find kth smallest using partitioning.
+
 * Understand Quick Sort.
+
 * Understand heap construction and Heap Sort.
+
 * Work with randomly generated input stored in files.
+
 * Analyze operations on 1D arrays and 2D matrices.
+
 * Implement convolution using FFT.
+
 * Analyze algorithms involving weighted operation costs.
+
 * Design sorting algorithms using reversals.
+
 * Improve problem-solving skills using C programming.
 
 ---
 
-## How to Use
+## How to Use**
 
 Clone the repository:
 
 ```bash
+
 git clone https://github.com/<username>/DAA-Lab.git
+
 cd DAA-Lab
+
 ```
 
 Compile and run a program:
 
 ```bash
+
 gcc "Code solutions/Q1_FunctionGraph.c" -o Q1 -lm
+
 ./Q1
+
 ```
 
 For Lab 2:
 
 ```bash
+
 gcc Q2/mergesort_compare.c -o Q2
+
 ./Q2
+
 ```
 
 For Lab 3:
 
 ```bash
+
 gcc Q1/binary_ternary_search.c -o Q1
+
 ./Q1
+
 ```
 
 For Lab 4:
 
 ```bash
+
 gcc q1/q1.c -o q1
+
 ./q1
+
 ```
 
 For Lab 5:
 
 ```bash
+
 gcc q1/q1.c -o q1
+
 ./q1
+
 ```
 
 For Lab 6:
 
 ```bash
+
 gcc q1/q1.c -o q1 -lm
+
 ./q1
+
 ```
 
-For Lab 7:
+For Lab 7, each question has its own directory:
 
 ```bash
 cd "Lab 7/q1"
@@ -295,106 +498,223 @@ gcc q1.c -o q1
 ./q1
 ```
 
+Similarly, for the other questions:
+
+```bash
+cd "Lab 7/q2"
+gcc q2.c -o q2
+./q2
+```
+
+```bash
+cd "Lab 7/q3"
+gcc q3.c -o q3
+./q3
+```
+
+```bash
+cd "Lab 7/q4"
+gcc q4.c -o q4
+./q4
+```
+
+```bash
+cd "Lab 7/q5"
+gcc q5.c -o q5
+./q5
+```
+
+```bash
+cd "Lab 7/q6"
+gcc q6.c -o q6
+./q6
+```
+
+```bash
+cd "Lab 7/q7"
+gcc q7.c -o q7
+./q7
+```
+For Lab 8, each question has its own directory:
+
+```bash
+cd "Lab 8/q1/"
+gcc q1.c -o q1
+./q1
+```
+Similarly, for other questions:
+
+cd "Lab 8/q2"
+gcc q2.c -o q2
+./q2
+
 ---
 
-## Laboratory Contents
+## Laboratory Contents**
 
-### Lab 1
+### Lab 1**
 
 1. Growth Rate Analysis
+
 2. Coin Toss Simulation
+
 3. Bubble Sort
+
 4. Tower of Hanoi
+
 5. Partition Point
+
 6. Element Uniqueness
 
-### Lab 2
+### Lab 2**
 
 1. Dictionary Operations using different data structures
+
 2. Comparison of 2-way Merge Sort and Modified 3-way Merge Sort
+
 3. Comparison of Sequential and Pairwise k-way Merging
 
-### Lab 3
+### Lab 3**
 
 1. Binary Search vs Ternary Search
+
 2. Search for Defective Coin using Divide and Conquer
+
 3. Min/Max using Pairwise Comparison
+
 4. Strassen Matrix Multiplication
+
 5. Special-Pattern Matrix Multiplication using Divide and Conquer
+
 6. Loop Invariants and Selection Sort
 
-### Lab 4
+### Lab 4**
 
 1. Sorting Elements by Colour
+
 2. Pair with Given Sum
+
 3. k Elements with Given Sum
+
 4. Maximum Simultaneous Party Attendance
+
 5. Merge Overlapping Intervals
+
 6. Point with Maximum Interval Overlap
 
-### Lab 5
+### Lab 5**
 
 1. Median of N Numbers without Sorting
+
 2. kth Smallest Element without Sorting
+
 3. Quick Sort for N Random Elements Stored in File
+
 4. Heap Sort for N Random Elements Stored in File
 
-### Lab 6
+### Lab 6**
 
-#### Set 1
+#### Set 1**
 
 1. 1D Array Operations
+
 2. 2D Matrix Operations
+
 3. Convolution of Two Vectors
+
 4. Sorting via Reversal
 
-#### Set 2
+#### Set 2**
 
 1. 1D Array Operations
+
 2. 2D Matrix Operations
+
 3. Convolution of Two Vectors
-4. Sorting via Reversal  
 
-### Lab 7
+4. Sorting via Reversal
 
-1. Invert the coin triangle  
-2. Super Egg Testing  
-3. Reve's Puzzle  
-4. Security Switches  
-5. Hitting a Moving Target  
-6. The Best Time to Be Alive  
+### Lab 7**
+
+1. Invert the coin triangle
+
+2. Super Egg Testing
+
+3. Reve's Puzzle
+
+4. Security Switches
+
+5. Hitting a Moving Target
+
+6. The Best Time to Be Alive
+
 7. Matrix Chain Multiplication (MCM)
+
+### Lab 8
+
+1. Minimum Coin Change
+
+2. Coin Change – Total Number of Ways
+
+3. Longest Common Subsequence (LCS)
+
+4. Longest Increasing Subsequence (LIS)
+
+5. Maximum Sum Increasing Subsequence
+
+6. Edit Distance with Traceback Information
+
+7. Rod Cutting with Reconstruction
+
+8. Optimal Binary Search Trees (OBST)
+
+9. Collatz Conjecture
 
 ---
 
-## Complexity Highlights
+## Complexity Highlights**
 
-| Lab       | Major Complexity                                                                                    |
+| Lab       | Major Complexity                                                                                    |
+
 | --------- | --------------------------------------------------------------------------------------------------- |
-| **Lab 1** | Various basic and recursive algorithms                                                              |
-| **Lab 2** | Merge-based algorithms and k-way merging                                                            |
-| **Lab 3** | Divide and Conquer, Strassen, Selection Sort                                                        |
-| **Lab 4** | O(n), O(n log n), O(n^(k−1) log n)                                                                  |
-| **Lab 5** | Quickselect, Quick Sort, Heap Sort                                                                  |
-| **Lab 6** | Array/Matrix operations, O(n log n) FFT convolution, O(n) reversal count, O(n log² n) reversal cost |  
+
+| ****Lab 1**** | Various basic and recursive algorithms                                                              |
+
+| ****Lab 2**** | Merge-based algorithms and k-way merging                                                            |
+
+| ****Lab 3**** | Divide and Conquer, Strassen, Selection Sort                                                        |
+
+| ****Lab 4**** | O(n), O(n log n), O(n^(k−1) log n)                                                                  |
+
+| ****Lab 5**** | Quickselect, Quick Sort, Heap Sort                                                                  |
+
+| ****Lab 6**** | Array/Matrix operations, O(n log n) FFT convolution, O(n) reversal count, O(n log² n) reversal cost |
+
 Lab 7
+
 Recurrence Relations, Dynamic Programming, O(n), O(n log n), O(n²), and O(n³) algorithms
 
----  
+| **Lab 8** | Dynamic Programming: O(nV), O(mn), O(n²), O(n³); Collatz trajectory simulation with data-dependent complexity |
 
-# Future Additions
+---
+
+# Future Additions**
 
 * More DAA laboratory assignments
+
 * Additional graph visualizations
+
 * Algorithm comparisons
+
 * Performance benchmarking
+
 * Improved documentation
 
 ---
 
-# Author
+# Author**
 
-**Preetika Mishra**
+****Preetika Mishra****
 
 B.Tech – Computer Science & Engineering
 

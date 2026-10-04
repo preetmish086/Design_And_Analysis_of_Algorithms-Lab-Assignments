@@ -1,0 +1,38 @@
+Minimum number of coins required to form V, with unlimited copies of denomination; return -1 if impossible.
+
+dp[x]= minimum number of coins needed to make amount x
+dp[x]= min(dp[x-c]+1) for every coin c<=x
+
+Base case-
+dp[0]=0
+
+Impossible states-
+INF=V+1 because no valid answer can require more than V coins if denomination 1 exists.
+
+PSEUDOCODE-
+MIN-COINS(coins, n, V)
+
+    dp[0] ← 0
+
+    for amount ← 1 to V
+        dp[amount] ← INF
+
+    for amount ← 1 to V
+        for i ← 0 to n-1
+
+            coin ← coins[i]
+
+            if coin ≤ amount
+                if dp[amount - coin] + 1 < dp[amount]
+                    dp[amount] ← dp[amount - coin] + 1
+
+    if dp[V] = INF
+        return -1
+
+    return dp[V]
+
+
+COMPLEXITY-
+There are V amounts and n coins considered for each amount
+TIME- O(nV)
+SPACE- O(V)

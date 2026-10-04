@@ -1,0 +1,31 @@
+PSEUDOCODE-
+EDIT-DISTANCE(A, B)
+
+    m ← length(A)
+    n ← length(B)
+
+    for i ← 0 to m
+        dp[i][0] ← i
+
+    for j ← 0 to n
+        dp[0][j] ← j
+
+    for i ← 1 to m
+        for j ← 1 to n
+
+            if A[i-1] = B[j-1]
+                dp[i][j] ← dp[i-1][j-1]
+
+            else
+                dp[i][j] ← 1 + min(
+                    dp[i-1][j],
+                    dp[i][j-1],
+                    dp[i-1][j-1]
+                )
+
+    return dp[m][n]
+
+
+COMPLEXITY-
+Time  = O(mn)
+Space = O(mn)

@@ -1,0 +1,23 @@
+PSEUDOCODE-
+LIS(A, n)
+
+    for i ← 0 to n-1
+        dp[i] ← 1
+
+    answer ← 1
+
+    for i ← 1 to n-1
+
+        for j ← 0 to i-1
+
+            if A[j] < A[i]
+                dp[i] ← max(dp[i], dp[j] + 1)
+
+        answer ← max(answer, dp[i])
+
+    return answer
+
+
+COMPLEXITY-
+Time  = O(n²)
+Space = O(n)

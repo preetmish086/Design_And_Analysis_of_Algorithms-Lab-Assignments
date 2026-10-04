@@ -1,0 +1,35 @@
+Q7. Rod Cutting with Reconstruction
+
+The question asks for:
+maximum revenue
+exact lengths of pieces producing that revenue.
+
+PSEUDOCODE-
+ROD-CUTTING(price, n)
+
+    dp[0] ← 0
+
+    for i ← 1 to n
+
+        dp[i] ← -∞
+
+        for j ← 1 to i
+
+            candidate ← price[j] + dp[i-j]
+
+            if candidate > dp[i]
+                dp[i] ← candidate
+                choice[i] ← j
+
+    print dp[n]
+
+    length ← n
+
+    while length > 0
+        print choice[length]
+        length ← length - choice[length]
+
+
+COMPLEXITY-
+Time  = O(n²)
+Space = O(n)

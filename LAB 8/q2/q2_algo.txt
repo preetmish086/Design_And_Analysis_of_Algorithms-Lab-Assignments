@@ -1,0 +1,31 @@
+similar to q1, but asks for total number of combinations instead of minimum number of coins.
+the order does not matter so 2+1 and 1+2 must count as the same combination
+
+dp[v]= number of ways to make amount V
+
+dp[0]=1
+since there is exactly 1 way to make zero; choose nothing.
+
+for each coin c:
+dp[v]+=dp[v-c]
+
+
+PSEUDOCODE-
+COUNT-WAYS(coins, n, V)
+
+    dp[0] ← 1
+
+    for i ← 1 to V
+        dp[i] ← 0
+
+    for each coin c in coins
+
+        for amount ← c to V
+            dp[amount] ← dp[amount] + dp[amount-c]
+
+    return dp[V]
+
+
+COMPLEXITY-
+TIME- O(nV)
+SPACE- O(V)
