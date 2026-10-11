@@ -1,0 +1,25 @@
+ALGORITHM-
+sort all start times
+sort all end times
+
+i = 0
+j = 0
+rooms = 0
+answer = 0
+
+while i < n:
+
+    if start[i] < end[j]:
+        rooms++
+        answer = max(answer, rooms)
+        i++
+
+    else:
+        rooms--
+        j++
+
+return answer
+
+COMPLEXITY-
+Time- O(nlogn)
+Space- O(n)

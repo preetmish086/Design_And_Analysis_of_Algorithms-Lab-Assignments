@@ -1,0 +1,42 @@
+ALGORITHM-
+Sort stations by distance.
+Start with fuel F.
+Maintain max heap of fuel amounts from stations already reachable.
+Move toward the target.
+If fuel is insufficient:
+- remove maximum fuel from heap
+- refuel
+- increment stop count
+If heap is empty, impossible.
+
+PSEUDOCODE-
+sort stations by distance
+
+fuel = F
+previous = 0
+stops = 0
+maxHeap = empty
+
+for each station and target:
+
+    distance = current_position - previous
+
+    while fuel < distance:
+
+        if maxHeap is empty:
+            return impossible
+
+        fuel += extractMax(maxHeap)
+        stops++
+
+    fuel -= distance
+    previous = current_position
+
+    if current point is a station:
+        insert station fuel into maxHeap
+
+return stops
+
+COMPLEXITY-
+Time- O(nlogn)
+Space- O(n)

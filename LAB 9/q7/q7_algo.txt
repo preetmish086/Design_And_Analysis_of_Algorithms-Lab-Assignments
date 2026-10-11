@@ -1,0 +1,43 @@
+Greedy idea-
+1. Convert every odd number to 2x.
+2. Put everything in a max heap.
+3. Keep track of minimum.
+4. Remove maximum.
+5. Update answer.
+6. If maximum is even, divide by 2 and insert it again.
+7. If maximum is odd, stop.
+because an odd maximum cannot be divided further.
+
+PSEUDOCODE-
+for every x:
+    if x is odd:
+        x = 2*x
+
+insert all x into max heap
+
+minValue = minimum x
+answer = infinity
+
+while true:
+
+    maxValue = heap.max
+
+    answer = min(answer,
+                 maxValue - minValue)
+
+    if maxValue is odd:
+        break
+
+    remove maxValue
+
+    newValue = maxValue / 2
+
+    minValue = min(minValue, newValue)
+
+    insert newValue
+
+return answer
+
+COMPLEXITY-
+Time- O(n log M log n) where M is the maximum value.
+Space- O(n)

@@ -1,0 +1,20 @@
+ALGORITHM-
+put all sticks into min heap
+
+totalCost = 0
+
+while heap has more than one stick:
+
+    a = extractMin()
+    b = extractMin()
+
+    cost = a + b
+    totalCost += cost
+
+    insert cost
+
+return totalCost
+
+COMPLEXITY-
+Time- O(nlogn)
+Space- O(n)

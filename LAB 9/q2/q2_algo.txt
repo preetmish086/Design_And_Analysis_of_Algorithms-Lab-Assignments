@@ -1,0 +1,47 @@
+ALGORITHM-
+Put all frequencies into a min heap.
+Remove two minimum nodes.
+Create a new node with frequency = sum.
+Insert the new node back.
+Repeat until one node remains.
+Traverse the tree to obtain codes.
+Generate canonical codes from code lengths.
+
+PSEUDOCODE-
+Huffman(frequencies):
+
+    create min heap H
+
+    for each symbol:
+        insert symbol into H
+
+    while size(H) > 1:
+        x = extractMin(H)
+        y = extractMin(H)
+
+        z = new node
+        z.frequency = x.frequency + y.frequency
+        z.left = x
+        z.right = y
+
+        insert z into H
+
+    root = extractMin(H)
+
+    traverse root:
+        left  -> 0
+        right -> 1
+
+    obtain code length of every symbol
+
+    sort symbols by:
+        increasing code length
+        then lexicographic symbol order
+
+    generate canonical codes
+
+    return codebook
+
+COMPLEXITY-
+Time- O(nlogn)
+Space- O(n)

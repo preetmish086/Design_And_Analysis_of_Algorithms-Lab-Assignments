@@ -1,0 +1,36 @@
+Approach
+Let dp[i][j] be the minimum weighted path cost for the consecutive leaves from index i to j, measured from the root of that subtree.
+- If the interval contains one leaf, its cost is zero because its depth within that subtree is zero.
+- Otherwise, try every possible split k between i and j.
+- When a subtree becomes a child of a parent, every leaf in it gains one depth level. So add the sum of its weights.
+
+Store the best split k in split[i][j] so we can reconstruct the tree.
+
+PSEUDOCODE-
+
+OPTIMAL-ALPHABETIC-TREE(w, n):
+    Compute prefix sums P
+    dp[i][i] = 0 for every i
+
+    for length = 2 to n:
+        for i = 0 to n - length:
+            j = i + length - 1
+            dp[i][j] = infinity
+
+            intervalWeight = P[j+1] - P[i]
+
+            for k = i to j - 1:
+                candidate = dp[i][k]
+                          + dp[k+1][j]
+                          + intervalWeight
+
+                if candidate < dp[i][j]:
+                    dp[i][j] = candidate
+                    split[i][j] = k
+
+    Reconstruct the tree using split[0][n-1]
+    Return dp[0][n-1] and the tree
+
+COMPLEXITY-
+Time- O(n^3)
+Space- O(n^2)

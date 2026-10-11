@@ -1,0 +1,37 @@
+ALGORITHM-
+At each position:
+1. Release characters whose cooldown has expired.
+2. Take most frequent available character.
+3. Put it into answer.
+4. Decrease its frequency.
+5. Put it into cooldown.
+6. Repeat.
+
+PSEUDOCODE-
+count frequency of every character
+
+put all characters into max heap
+
+queue = empty
+
+for position = 0 to n-1:
+
+    release characters whose cooldown expired
+    into heap
+
+    if heap empty:
+        return impossible
+
+    x = extractMax()
+
+    append x to answer
+    decrease frequency[x]
+
+    if frequency[x] > 0:
+        put x into cooldown queue
+
+return answer
+
+COMPLEXITY-
+Time- O(n)
+Space- O(a)

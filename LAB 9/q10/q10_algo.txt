@@ -1,0 +1,16 @@
+ALGORITHM-
+while more than one string:
+
+    find pair with maximum overlap
+
+    merge them using overlap
+
+    remove original pair
+
+    insert merged string
+
+return final string
+
+COMPLEXITY-
+Time- O(n^3.L) in the worst case, where L is maximum string length
+Space- O(nL)

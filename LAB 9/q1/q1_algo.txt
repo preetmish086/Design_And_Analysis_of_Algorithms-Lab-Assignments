@@ -1,0 +1,46 @@
+Fractional Knapsack with Deterioration Rate
+An item with large decay rate loses value faster.
+So, items with high deterioration should be handled earlier.
+
+A useful greedy interpretation
+
+At time t, calculate: the score(i) at t equal to v(i)/w(i) - lambda(i).t
+
+Choose the item having maximum current score.
+
+Then:
+
+Take as much of it as possible.
+Update remaining capacity.
+Move to the next time.
+Recalculate the effective densities.
+
+PSEUDOCODE-
+Fractional-Knapsack-With-Decay (items, W)
+    for each item i:
+        density[i]=value[i]/weight[i]
+
+    time = 0
+    totalValue = 0
+
+    while W>0 and there are unused items:
+        for every available item i:
+            effective[i] = density[i] - lambda[i] * time
+
+        choose item j with maximum effective[j]
+
+        amount = min(weight[j], W)
+
+        totalValue += amount * effective[j]
+
+        W = W - amount
+
+        mark j as processed
+        time = time + 1
+
+    return totalValue
+
+
+COMPLEXITY-
+Time- O(n^2)
+Space- O(n)
