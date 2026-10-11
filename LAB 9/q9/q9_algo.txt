@@ -1,36 +1,30 @@
-Approach
-Let dp[i][j] be the minimum weighted path cost for the consecutive leaves from index i to j, measured from the root of that subtree.
-- If the interval contains one leaf, its cost is zero because its depth within that subtree is zero.
-- Otherwise, try every possible split k between i and j.
-- When a subtree becomes a child of a parent, every leaf in it gains one depth level. So add the sum of its weights.
+ALGORITHM-
+The program follows a three-phase approach:
 
-Store the best split k in split[i][j] so we can reconstruct the tree.
+1. **Phase I — Combination:** Maintain the active nodes in their original order. Repeatedly select a minimum-weight compatible pair and merge it into a new internal node.
+2. **Phase II — Level Assignment:** Traverse the combination tree to determine the depth of each original leaf.
+3. **Phase III — Alphabetic Tree Reconstruction:** Process leaves in their original order and use a stack to combine adjacent subtrees according to their levels, preserving the order of the leaves.
+
+Finally, print the alphabetic tree and calculate its weighted path cost.
+
 
 PSEUDOCODE-
+HuTucker(weights, n)
+    create one leaf node for each weight in original order
 
-OPTIMAL-ALPHABETIC-TREE(w, n):
-    Compute prefix sums P
-    dp[i][i] = 0 for every i
+    while more than one active node remains:
+        find the minimum-weight compatible pair
+        merge the pair into a new internal node
+        update the active-node sequence
 
-    for length = 2 to n:
-        for i = 0 to n - length:
-            j = i + length - 1
-            dp[i][j] = infinity
+    determine the level of each original leaf
 
-            intervalWeight = P[j+1] - P[i]
+    process original leaves from left to right
+    use a stack to reconstruct the alphabetic tree
 
-            for k = i to j - 1:
-                candidate = dp[i][k]
-                          + dp[k+1][j]
-                          + intervalWeight
+    calculate and print sum(weight[i] * depth[i])
 
-                if candidate < dp[i][j]:
-                    dp[i][j] = candidate
-                    split[i][j] = k
-
-    Reconstruct the tree using split[0][n-1]
-    Return dp[0][n-1] and the tree
 
 COMPLEXITY-
 Time- O(n^3)
-Space- O(n^2)
+Space- O(n)
